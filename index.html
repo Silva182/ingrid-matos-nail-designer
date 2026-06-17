@@ -1,0 +1,3453 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ingrid Matos Nail Designer - A Rainha do Alongamento</title>
+
+<!-- META TAGS -->
+<meta name="description" content="Ingrid Matos - A Rainha do Alongamento. Especialista em alongamentos de unhas com técnicas exclusivas como Acrigel, Molde F1 e Polygel. Agende já!">
+<meta property="og:title" content="Ingrid Matos Nail Designer - A Rainha do Alongamento">
+<meta property="og:description" content="Transforme suas unhas em verdadeiras obras de arte com a especialista em alongamentos.">
+<meta property="og:image" content="imagem/sobre.jpg">
+<meta property="og:url" content="https://ingridmatos.com">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#4a1a2e">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+/* ===== TODOS OS ESTILOS ===== */
+:root {
+  --pink-lightest: #fff8fa;
+  --pink-light: #fef0f3;
+  --pink-soft: #f9d5e0;
+  --pink-medium: #f0b6c4;
+  --pink-hot: #e91e8c;
+  --pink-deep: #c2185b;
+  --rose-dark: #4a1a2e;
+  --rose-medium: #6b3050;
+  --rose-light: #8b4567;
+  --gold: #d4a04a;
+  --gold-light: #f0d78c;
+  --gold-dark: #b8860b;
+  --white: #ffffff;
+  --shadow: 0 8px 32px rgba(74,26,46,0.12);
+  --shadow-lg: 0 20px 60px rgba(74,26,46,0.18);
+  --bg-body: #fff8fa;
+  --text-color: #4a1a2e;
+  --card-bg: #ffffff;
+  --border-color: #f9d5e0;
+  --transition-speed: 0.3s;
+}
+
+[data-theme="dark"] {
+  --pink-lightest: #1a0a12;
+  --pink-light: #2a1520;
+  --pink-soft: #3a1a2e;
+  --pink-medium: #5a2a42;
+  --rose-dark: #e8d5dd;
+  --rose-medium: #c8a8b8;
+  --rose-light: #a8889a;
+  --bg-body: #1a0a12;
+  --text-color: #e8d5dd;
+  --card-bg: #2a1520;
+  --border-color: #3a1a2e;
+  --shadow: 0 8px 32px rgba(0,0,0,0.4);
+  --shadow-lg: 0 20px 60px rgba(0,0,0,0.6);
+  --white: #2a1520;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;background:var(--bg-body);color:var(--text-color);overflow-x:hidden;transition:background var(--transition-speed), color var(--transition-speed)}
+.gold-text{background:linear-gradient(135deg,#d4a04a,#f0d78c,#d4a04a,#b8860b);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.btn-gold{background:linear-gradient(135deg,#d4a04a,#b8860b);color:#fff;border:none;padding:12px 32px;border-radius:50px;font-family:'Poppins',sans-serif;font-weight:600;font-size:14px;cursor:pointer;transition:all .3s;box-shadow:0 4px 15px rgba(212,160,74,0.4);display:inline-flex;align-items:center;gap:8px}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(212,160,74,0.5)}
+.btn-pink{background:linear-gradient(135deg,#e91e8c,#c2185b);color:#fff;border:none;padding:12px 32px;border-radius:50px;font-weight:600;font-size:14px;cursor:pointer;transition:all .3s;display:inline-flex;align-items:center;gap:8px}
+.btn-outline{background:transparent;color:var(--gold);border:2px solid var(--gold);padding:10px 28px;border-radius:50px;font-weight:600;font-size:14px;cursor:pointer;transition:all .3s;display:inline-flex;align-items:center;gap:8px}
+.btn-outline:hover{background:var(--gold);color:#fff}
+input,select,textarea{font-family:'Poppins',sans-serif;width:100%;padding:12px 16px;border:2px solid var(--border-color);border-radius:12px;font-size:14px;background:var(--card-bg);color:var(--text-color);transition:all .3s;outline:none}
+input:focus,select:focus{border-color:var(--gold)}
+label{font-size:13px;font-weight:500;color:var(--rose-medium);margin-bottom:4px;display:block}
+a{color:var(--gold);text-decoration:none}
+
+/* SCROLLBAR */
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--pink-light)}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:10px}
+::-webkit-scrollbar-thumb:hover{background:var(--gold-dark)}
+
+/* ANIMAÇÕES */
+@keyframes fadeInUp{
+  from{opacity:0;transform:translateY(40px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes shimmer{
+  0%{background-position:-200% 0}
+  100%{background-position:200% 0}
+}
+.fade-in{animation:fadeInUp 0.8s ease both}
+.skeleton{background:linear-gradient(90deg,var(--pink-light),var(--pink-soft),var(--pink-light));background-size:200% 100%;animation:shimmer 1.5s infinite;border-radius:12px}
+
+/* TOGGLE TEMA */
+.theme-toggle{background:none;border:none;color:#fff;font-size:20px;cursor:pointer;padding:8px;transition:color .3s}
+.navbar.scrolled .theme-toggle{color:var(--text-color)}
+[data-theme="dark"] .theme-toggle{color:var(--gold)}
+.theme-toggle:hover{transform:rotate(20deg)}
+
+/* BACK TO TOP */
+.back-to-top{position:fixed;bottom:30px;right:30px;z-index:999;background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:#fff;border:none;width:50px;height:50px;border-radius:50%;font-size:20px;cursor:pointer;box-shadow:0 4px 20px rgba(212,160,74,0.4);transition:all .3s;opacity:0;transform:translateY(20px);pointer-events:none}
+.back-to-top.show{opacity:1;transform:translateY(0);pointer-events:auto}
+.back-to-top:hover{transform:translateY(-5px);box-shadow:0 8px 30px rgba(212,160,74,0.6)}
+
+/* NAVBAR */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;padding:16px 0;transition:all .3s}
+.navbar.scrolled{background:rgba(255,248,250,0.98);backdrop-filter:blur(20px);box-shadow:0 2px 20px rgba(74,26,46,0.08)}
+[data-theme="dark"] .navbar.scrolled{background:rgba(26,10,18,0.98)}
+.nav-inner{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;cursor:pointer}
+.nav-logo i{font-size:32px;color:var(--gold-light);transition:color .3s}
+.navbar.scrolled .nav-logo i{color:var(--gold)}
+.nav-logo-text{display:flex;flex-direction:column;line-height:1.1}
+.nav-logo-text span{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:#fff;transition:color .3s}
+.navbar.scrolled .nav-logo-text span{color:var(--text-color)}
+.nav-logo-text small{font-size:9px;color:var(--gold-light);letter-spacing:3px;text-transform:uppercase;font-weight:700}
+.navbar.scrolled .nav-logo-text small{color:var(--gold-dark)}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{text-decoration:none;font-size:16px;font-weight:600;color:#fff;transition:color .3s;padding:8px 4px}
+.navbar.scrolled .nav-links a{color:var(--text-color)}
+.nav-links a:hover{color:var(--gold-light)}
+.navbar.scrolled .nav-links a:hover{color:var(--gold)}
+.nav-actions{display:flex;gap:12px;align-items:center}
+.hamburger{display:none;background:none;border:none;font-size:24px;color:#fff;cursor:pointer}
+.navbar.scrolled .hamburger{color:var(--text-color)}
+.nav-catalog-btn{background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:#fff;border:none;padding:10px 20px;border-radius:50px;font-weight:600;font-size:13px;cursor:pointer;transition:all .3s;display:flex;align-items:center;gap:6px}
+.nav-catalog-btn:hover{transform:scale(1.05)}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;overflow:hidden}
+.hero-background {
+  position: absolute;
+  inset: 0;
+  background-image: url('imagem/fundo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+.hero-background-overlay{position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(74,26,46,0.7) 0%,rgba(74,26,46,0.3) 20%,rgba(74,26,46,0.3) 80%,rgba(74,26,46,0.8) 100%);z-index:1}
+
+/* CARROSSEL - 6 CARDS DESKTOP / 2 CARDS MOBILE */
+.carousel-container{position:relative;z-index:2;flex:1;display:flex;flex-direction:column;justify-content:center;padding:80px 50px 40px;overflow:hidden}
+.carousel-wrapper{position:relative;width:100%;overflow:hidden}
+.carousel-track{display:flex;gap:16px;transition:transform .5s cubic-bezier(.25,.1,.25,1)}
+.carousel-slide{
+  flex: 0 0 calc(16.666% - 14px);
+  max-width: calc(16.666% - 14px);
+  aspect-ratio: 3/4;
+  max-height: 350px;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: all .4s;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+  border: 2px solid rgba(255,255,255,0.15);
+}
+.carousel-slide:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 20px 50px rgba(0,0,0,0.5);border-color:var(--gold)}
+.carousel-slide img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.carousel-slide:hover img{transform:scale(1.06)}
+.carousel-slide .carousel-fallback{width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--rose-dark),#6b2050);color:var(--gold);font-size:36px}
+.carousel-nav{position:absolute;top:50%;transform:translateY(-50%);z-index:10;background:rgba(255,255,255,0.2);backdrop-filter:blur(10px);border:2px solid rgba(255,255,255,0.3);color:#fff;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .3s;font-size:16px}
+.carousel-nav:hover{background:var(--gold);border-color:var(--gold);transform:translateY(-50%) scale(1.1)}
+.carousel-nav.prev{left:8px}
+.carousel-nav.next{right:8px}
+.carousel-dots{display:flex;justify-content:center;gap:10px;margin-top:20px;position:relative;z-index:5}
+.carousel-dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.3);cursor:pointer;transition:all .3s;border:2px solid rgba(255,255,255,0.2)}
+.carousel-dot.active{background:var(--gold);border-color:var(--gold-light);transform:scale(1.3)}
+
+@media(max-width:768px){
+  .carousel-slide{
+    flex: 0 0 calc(50% - 12px);
+    max-width: calc(50% - 12px);
+    max-height: 280px;
+  }
+  .carousel-container{padding:60px 20px 30px}
+  .carousel-nav{width:36px;height:36px;font-size:14px}
+  .carousel-nav.prev{left:4px}
+  .carousel-nav.next{right:4px}
+}
+
+@media(min-width:769px) and (max-width:1024px){
+  .carousel-slide{
+    flex: 0 0 calc(33.333% - 12px);
+    max-width: calc(33.333% - 12px);
+    max-height: 320px;
+  }
+}
+
+.hero-footer{position:relative;z-index:5;padding:30px;text-align:center}
+.hero-buttons{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
+
+/* SEÇÕES */
+.section{padding:100px 24px;background:var(--bg-body);transition:background var(--transition-speed)}
+.section-inner{max-width:1280px;margin:0 auto}
+.section-header{text-align:center;margin-bottom:60px}
+.section-header h2{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,42px);margin-bottom:12px;color:var(--text-color)}
+.section-header p{color:var(--rose-light);font-size:16px;max-width:600px;margin:0 auto}
+.section-divider{width:80px;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-light),var(--gold));margin:16px auto 0;border-radius:2px}
+.section-hidden{opacity:0;transform:translateY(40px);transition:all 0.8s ease}
+.section-visible{opacity:1;transform:translateY(0)}
+
+/* SOBRE */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-image{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:3/4;max-height:600px;border:3px solid var(--gold-light);background:linear-gradient(135deg,var(--rose-dark),#6b2050);display:flex;align-items:center;justify-content:center}
+.about-image img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.about-image .about-fallback{display:none;flex-direction:column;align-items:center;justify-content:center;color:var(--gold);padding:30px;text-align:center;position:absolute;top:0;left:0;right:0;bottom:0;z-index:1;background:linear-gradient(135deg,var(--rose-dark),#6b2050);pointer-events:none}
+.about-image .about-fallback.show{display:flex}
+.about-image .about-fallback i{font-size:48px;margin-bottom:12px}
+.about-image .about-fallback span{font-family:'Playfair Display',serif;font-size:24px;font-weight:700}
+.about-image .about-fallback small{font-size:13px;opacity:0.7;margin-top:6px}
+.about-image-overlay{position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(180deg,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.1) 40%,rgba(0,0,0,0) 100%);display:flex;align-items:flex-start;justify-content:center;padding-top:20px;z-index:2;pointer-events:none}
+.about-image-overlay h2{font-family:'Playfair Display',serif;font-size:clamp(24px,3vw,34px);font-weight:900;color:var(--gold);text-shadow:0 2px 20px rgba(0,0,0,0.5);text-align:center;line-height:1.1}
+.about-badge{position:absolute;bottom:16px;left:16px;right:16px;background:linear-gradient(135deg,rgba(212,160,74,0.95),rgba(184,134,11,0.95));color:#fff;padding:10px 16px;border-radius:12px;font-weight:700;font-size:12px;text-align:center;letter-spacing:1px;z-index:3;pointer-events:none}
+.about-text h3{font-family:'Playfair Display',serif;font-size:28px;margin-bottom:16px}
+.about-text p{color:var(--rose-medium);line-height:1.8;margin-bottom:16px}
+.about-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px}
+.stat-card{text-align:center;padding:24px 16px;background:var(--card-bg);border-radius:16px;box-shadow:var(--shadow);border:1px solid var(--border-color)}
+.stat-card .number{font-family:'Playfair Display',serif;font-size:48px;font-weight:900;line-height:1}
+.stat-card .label{font-size:16px;color:var(--rose-light);margin-top:8px;font-weight:500}
+
+/* SERVIÇOS */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:24px}
+.service-card{background:var(--card-bg);border-radius:20px;overflow:hidden;transition:all .3s;cursor:pointer;box-shadow:var(--shadow);border:1px solid var(--border-color)}
+.service-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg);border-color:var(--gold)}
+.service-card-image{width:100%;height:200px;overflow:hidden;position:relative;background:linear-gradient(135deg,var(--pink-soft),var(--pink-medium))}
+.service-card-image img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.service-card:hover .service-card-image img{transform:scale(1.1)}
+.service-card-image .placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:var(--rose-light);font-size:48px}
+.service-card-content{padding:20px;text-align:center}
+.service-card-content h4{font-family:'Playfair Display',serif;font-size:18px;margin-bottom:8px;color:var(--text-color)}
+.service-card-content .category{font-size:11px;color:var(--rose-light);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.service-card-content .price{font-size:16px;font-weight:700;color:var(--gold-dark)}
+.service-card-content .book-btn{margin-top:12px;background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:#fff;border:none;padding:10px 24px;border-radius:50px;font-size:13px;font-weight:600;cursor:pointer;transition:all .3s}
+.service-card-content .book-btn:hover{transform:scale(1.05)}
+.service-views{font-size:11px;color:var(--rose-light);margin-top:8px;display:flex;align-items:center;justify-content:center;gap:4px}
+.view-more-container{text-align:center;margin-top:24px}
+
+/* CATÁLOGO */
+.catalog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.catalog-card{background:var(--card-bg);border-radius:16px;overflow:hidden;transition:all .3s;cursor:pointer;border:1px solid var(--border-color)}
+.catalog-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);border-color:var(--gold)}
+.catalog-card-image{width:100%;height:180px;overflow:hidden;background:linear-gradient(135deg,var(--pink-soft),var(--pink-medium));display:flex;align-items:center;justify-content:center}
+.catalog-card-image img{width:100%;height:100%;object-fit:cover}
+.catalog-card-image .placeholder{font-size:40px;color:var(--rose-light)}
+.catalog-card-body{padding:16px;text-align:center}
+.catalog-card-body h4{font-family:'Playfair Display',serif;font-size:16px;margin-bottom:4px;color:var(--text-color)}
+.catalog-card-body .price{font-size:18px;font-weight:700;color:var(--gold-dark);margin-bottom:8px}
+.catalog-card-body .duration{font-size:12px;color:var(--rose-light);display:flex;align-items:center;justify-content:center;gap:4px}
+
+/* GALERIA */
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+.gallery-item{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:1;cursor:pointer;transition:all .3s;border:2px solid transparent;background:var(--pink-soft)}
+.gallery-item:hover{transform:scale(1.05);border-color:var(--gold);z-index:2}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.gallery-item:hover img{transform:scale(1.1)}
+.gallery-item .gallery-overlay{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.7));padding:20px 16px 16px;opacity:0;transition:opacity .3s}
+.gallery-item:hover .gallery-overlay{opacity:1}
+.gallery-item .gallery-overlay span{color:#fff;font-size:14px;font-weight:600}
+.gallery-item .gallery-fallback{display:flex;align-items:center;justify-content:center;width:100%;height:100%;background:var(--pink-soft);color:var(--rose-light);font-size:48px}
+.gallery-filters{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-bottom:24px}
+.gallery-filters button{padding:8px 20px;border-radius:50px;border:2px solid var(--border-color);background:transparent;color:var(--text-color);cursor:pointer;transition:all .3s;font-weight:500}
+.gallery-filters button.active,.gallery-filters button:hover{border-color:var(--gold);background:var(--gold);color:#fff}
+
+/* AVALIAÇÕES */
+.reviews-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px}
+.review-card{background:var(--card-bg);border-radius:16px;padding:24px;border:1px solid var(--border-color);box-shadow:var(--shadow)}
+.review-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
+.review-card .stars{color:var(--gold);font-size:18px;margin-bottom:8px;letter-spacing:2px}
+.review-card .review-text{font-size:14px;line-height:1.6;color:var(--rose-medium);margin-bottom:12px}
+.review-card .review-author{font-weight:600;color:var(--text-color)}
+.review-card .review-date{font-size:12px;color:var(--rose-light)}
+
+/* PROMOÇÕES */
+.promo-banner{background:linear-gradient(135deg,var(--gold),var(--gold-dark));border-radius:20px;padding:40px;text-align:center;color:#fff;margin-bottom:40px;position:relative;overflow:hidden}
+.promo-banner::before{content:'%';position:absolute;right:-30px;top:-30px;font-size:180px;opacity:0.1;font-weight:900}
+.promo-banner h3{font-family:'Playfair Display',serif;font-size:32px;margin-bottom:8px}
+.promo-banner p{font-size:16px;opacity:0.9}
+.promo-banner .promo-code{display:inline-block;background:rgba(255,255,255,0.2);padding:8px 24px;border-radius:50px;font-weight:700;font-size:18px;letter-spacing:2px;margin-top:12px;border:2px dashed rgba(255,255,255,0.5)}
+.promo-banner .promo-discount{font-size:48px;font-weight:900;display:block;margin:8px 0}
+
+/* PAYMENT */
+.payment-section{background:linear-gradient(135deg,var(--rose-dark),#6b2050);padding:60px 24px;text-align:center}
+.payment-section h2{font-size:32px;margin-bottom:12px}
+.payment-section > p{font-size:16px;color:rgba(255,255,255,0.8)}
+.payment-methods{display:flex;justify-content:center;flex-wrap:wrap;gap:28px;margin-top:32px}
+.payment-item{display:flex;flex-direction:column;align-items:center;gap:10px;color:rgba(255,255,255,0.9)}
+.payment-item i{font-size:40px;color:var(--gold)}
+.payment-item span{font-size:15px;font-weight:500}
+
+/* SOCIAL */
+.social-follow-btn{display:inline-flex;align-items:center;gap:10px;padding:12px 28px;border-radius:50px;background:linear-gradient(135deg,#405de6,#5851db,#833ab4,#c13584,#e1306c,#fd1d1d);color:#fff;border:none;font-weight:600;font-size:15px;cursor:pointer;transition:all .3s;text-decoration:none}
+.social-follow-btn:hover{transform:scale(1.05);box-shadow:0 8px 25px rgba(225,48,108,0.4)}
+.social-follow-btn i{font-size:22px}
+.social-links-footer{display:flex;gap:16px;margin-top:12px;flex-wrap:wrap}
+.social-links-footer a{display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,0.1);color:#fff;font-size:20px;transition:all .3s;text-decoration:none}
+.social-links-footer a:hover{background:var(--gold);transform:translateY(-3px)}
+
+/* FOOTER */
+.footer{background:#2a0e1e;color:rgba(255,255,255,0.7);padding:60px 24px 24px}
+.footer-grid{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.footer-brand h3{font-family:'Playfair Display',serif;font-size:24px;color:#fff;margin-bottom:12px}
+.footer-brand p{font-size:14px;line-height:1.7}
+.footer-col h4{color:var(--gold);font-size:16px;text-transform:uppercase;letter-spacing:2px;margin-bottom:20px;font-weight:600}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:12px;font-size:15px;display:flex;align-items:center;gap:10px}
+.footer-col ul li i{color:var(--gold);width:16px}
+.footer-col ul li a{color:rgba(255,255,255,0.8);text-decoration:none;transition:color .3s}
+.footer-col ul li a:hover{color:var(--gold)}
+.footer-admin-link{display:inline-flex;align-items:center;gap:6px;color:rgba(255,255,255,0.35);font-size:12px;cursor:pointer;transition:color .3s;border:none;background:none;margin-top:12px}
+.footer-admin-link:hover{color:var(--gold)}
+.footer-bottom{max-width:1280px;margin:0 auto;padding-top:24px;border-top:1px solid rgba(255,255,255,0.1);text-align:center;font-size:13px}
+
+/* MODAIS */
+.modal-overlay{position:fixed;inset:0;background:rgba(74,26,46,0.7);backdrop-filter:blur(8px);z-index:2000;display:none;align-items:center;justify-content:center;padding:24px}
+.modal-overlay.active{display:flex}
+.modal{background:var(--card-bg);border-radius:24px;max-width:500px;width:100%;max-height:90vh;overflow-y:auto;box-shadow:0 25px 80px rgba(0,0,0,0.3);position:relative}
+.modal-lg{max-width:900px}
+.modal-xl{max-width:1100px}
+.modal-close{position:absolute;top:16px;right:16px;width:40px;height:40px;border-radius:50%;border:none;background:var(--pink-light);color:var(--text-color);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;transition:all .3s;z-index:10}
+.modal-close:hover{background:var(--pink-hot);color:#fff}
+.modal-header{padding:32px 32px 0;text-align:center}
+.modal-header h2{font-family:'Playfair Display',serif;font-size:26px;margin-bottom:4px;color:var(--text-color)}
+.modal-body{padding:24px 32px 32px}
+
+/* TABS */
+.tabs{display:flex;gap:0;margin-bottom:24px;background:var(--pink-light);border-radius:12px;padding:4px}
+.tab-btn{flex:1;padding:12px;border:none;background:none;border-radius:10px;font-weight:500;color:var(--rose-light);cursor:pointer;transition:all .3s}
+.tab-btn.active{background:var(--card-bg);color:var(--text-color);box-shadow:0 2px 8px rgba(0,0,0,0.08)}
+
+/* BOOKING STEPS */
+.booking-steps{display:flex;justify-content:center;gap:8px;margin-bottom:32px}
+.step-circle{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;border:2px solid var(--border-color);color:var(--rose-light);transition:all .3s}
+.step-circle.active{background:var(--gold);border-color:var(--gold);color:#fff}
+.step-circle.done{background:var(--pink-hot);border-color:var(--pink-hot);color:#fff}
+.step-line{width:40px;height:2px;background:var(--border-color);transition:background .3s}
+.step-line.active,.step-line.done{background:var(--gold)}
+
+/* CALENDAR */
+.calendar{width:100%}
+.calendar-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+.calendar-header h3{font-family:'Playfair Display',serif;font-size:18px;color:var(--text-color)}
+.calendar-nav{background:none;border:1px solid var(--border-color);width:38px;height:38px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--rose-medium);transition:all .3s}
+.calendar-nav:hover{background:var(--gold);color:#fff}
+.calendar-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;text-align:center}
+.calendar-grid .day-name{font-size:11px;font-weight:600;color:var(--rose-light);padding:8px 0}
+.calendar-grid .day{padding:10px 4px;border-radius:10px;font-size:14px;cursor:pointer;transition:all .3s;border:none;background:none;color:var(--text-color)}
+.calendar-grid .day:hover:not(.disabled):not(.empty){background:var(--pink-soft)}
+.calendar-grid .day.selected{background:var(--gold);color:#fff;font-weight:600}
+.calendar-grid .day.disabled{color:var(--pink-medium);opacity:.4;cursor:not-allowed}
+.calendar-grid .day.today{border:2px solid var(--gold)}
+
+/* TIME SLOTS */
+.time-slots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}
+.time-slot{padding:12px 8px;border:2px solid var(--border-color);border-radius:10px;text-align:center;cursor:pointer;transition:all .3s;background:none;font-size:13px;color:var(--text-color)}
+.time-slot:hover:not(.booked):not(.past){border-color:var(--gold);background:rgba(212,160,74,0.05)}
+.time-slot.selected{border-color:var(--gold);background:var(--gold);color:#fff}
+.time-slot.booked,.time-slot.past{opacity:.35;cursor:not-allowed;text-decoration:line-through}
+
+/* TOAST */
+.toast-container{position:fixed;top:80px;right:24px;z-index:3000;display:flex;flex-direction:column;gap:8px}
+.toast{padding:16px 24px;border-radius:12px;color:#fff;font-size:14px;font-weight:500;transform:translateX(120%);transition:transform .4s;max-width:380px;box-shadow:0 10px 30px rgba(0,0,0,0.2);display:flex;align-items:center;gap:10px}
+.toast.show{transform:translateX(0)}
+.toast.success{background:linear-gradient(135deg,#4caf50,#2e7d32)}
+.toast.error{background:linear-gradient(135deg,#e53935,#c62828)}
+.toast.info{background:linear-gradient(135deg,var(--gold),var(--gold-dark))}
+
+/* CONFIRMATION */
+.confirmation-box{background:linear-gradient(135deg,var(--pink-light),var(--card-bg));border:2px solid var(--gold);border-radius:20px;padding:32px;text-align:center;margin:20px 0}
+.confirmation-box .check-icon{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,#4caf50,#2e7d32);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:32px;color:#fff}
+.confirmation-details{background:var(--card-bg);border-radius:12px;padding:16px;margin:16px 0;text-align:left;font-size:14px;border:1px solid var(--border-color)}
+.confirmation-details .detail-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border-color)}
+.confirmation-details .detail-row:last-child{border-bottom:none}
+.confirmation-details .detail-value{font-weight:600;color:var(--gold-dark)}
+.confirmation-details .detail-total{font-size:20px;font-family:'Playfair Display',serif;color:var(--pink-hot)}
+
+/* ADMIN */
+.admin-layout{display:grid;grid-template-columns:260px 1fr;min-height:500px}
+.admin-sidebar{background:linear-gradient(180deg,var(--rose-dark),#3a0e22);padding:24px 16px;border-radius:24px 0 0 24px}
+.admin-sidebar h3{color:var(--gold);font-family:'Playfair Display',serif;font-size:16px;margin-bottom:24px;padding:0 8px}
+.admin-nav-item{display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;color:rgba(255,255,255,0.6);font-size:14px;cursor:pointer;transition:all .3s;border:none;background:none;width:100%;text-align:left}
+.admin-nav-item:hover,.admin-nav-item.active{background:rgba(255,255,255,0.1);color:#fff}
+.admin-nav-item.active{border-left:3px solid var(--gold)}
+.admin-nav-item i{width:20px}
+.admin-content{padding:32px;overflow-y:auto;max-height:70vh}
+.admin-section{display:none}
+.admin-section.active{display:block}
+.admin-section h3{font-family:'Playfair Display',serif;font-size:22px;margin-bottom:20px;color:var(--text-color)}
+.admin-table{width:100%;border-collapse:collapse;font-size:13px}
+.admin-table th{text-align:left;padding:12px;border-bottom:2px solid var(--border-color);color:var(--rose-light);font-size:11px;text-transform:uppercase}
+.admin-table td{padding:12px;border-bottom:1px solid var(--border-color);vertical-align:middle;color:var(--text-color)}
+.admin-badge{padding:4px 10px;border-radius:50px;font-size:11px;font-weight:600}
+.admin-badge.confirmed{background:#e8f5e9;color:#2e7d32}
+.admin-badge.pending{background:#fff3e0;color:#e65100}
+.admin-badge.cancelled{background:#ffebee;color:#c62828}
+.btn-sm{padding:8px 14px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;border:none;transition:all .3s}
+.btn-sm.edit{background:var(--pink-light);color:var(--text-color)}
+.btn-sm.delete{background:#ffebee;color:#c62828}
+.btn-sm.add{background:var(--gold);color:#fff;margin-bottom:16px}
+
+/* DECO */
+.deco-select-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-top:8px;max-height:200px;overflow-y:auto}
+.deco-select-item{padding:8px 10px;border:2px solid var(--border-color);border-radius:8px;cursor:pointer;transition:all .3s;font-size:11px;text-align:center;background:none;color:var(--text-color)}
+.deco-select-item:hover{border-color:var(--gold)}
+.deco-select-item.selected{border-color:var(--gold);background:rgba(212,160,74,0.1);color:var(--gold-dark);font-weight:600}
+
+/* USER MENU */
+.user-menu{position:relative}
+.user-menu-btn{display:flex;align-items:center;gap:8px;padding:8px 16px;border-radius:50px;border:2px solid var(--gold-light);background:rgba(255,255,255,0.1);cursor:pointer;font-size:13px;color:#fff;font-weight:500;transition:all .3s}
+.navbar.scrolled .user-menu-btn{border-color:var(--gold);background:none;color:var(--gold)}
+.user-dropdown{position:absolute;top:calc(100% + 8px);right:0;background:var(--card-bg);border-radius:12px;box-shadow:var(--shadow-lg);min-width:200px;display:none;overflow:hidden;z-index:100}
+.user-dropdown.show{display:block}
+.user-dropdown-item{padding:12px 16px;font-size:13px;cursor:pointer;display:flex;align-items:center;gap:10px;color:var(--text-color);transition:background .2s;border:none;background:none;width:100%;text-align:left}
+.user-dropdown-item:hover{background:var(--pink-light)}
+.user-dropdown-item i{color:var(--gold)}
+.user-dropdown-divider{height:1px;background:var(--border-color);margin:4px 0}
+
+/* MANAGERS */
+.carousel-manager-item,.gallery-manager-item,.promo-manager-item{display:flex;align-items:center;gap:16px;padding:16px;background:var(--card-bg);border-radius:12px;margin-bottom:12px;border:2px solid var(--border-color);transition:all .3s;flex-wrap:wrap}
+.carousel-manager-item:hover,.gallery-manager-item:hover,.promo-manager-item:hover{border-color:var(--gold)}
+.carousel-manager-item img,.gallery-manager-item img{width:80px;height:80px;object-fit:cover;border-radius:8px}
+.carousel-manager-item input,.gallery-manager-item .info{flex:1;min-width:150px}
+.gallery-manager-item .info input,.gallery-manager-item .info select{margin-bottom:4px}
+.promo-manager-item .info{flex:1;min-width:150px}
+.promo-manager-item .info input{margin-bottom:4px}
+.promo-manager-item .status-badge{padding:4px 12px;border-radius:50px;font-size:11px;font-weight:600}
+.promo-manager-item .status-badge.active{background:#e8f5e9;color:#2e7d32}
+.promo-manager-item .status-badge.inactive{background:#ffebee;color:#c62828}
+.carousel-manager-item .btn-remove,.gallery-manager-item .btn-remove,.promo-manager-item .btn-remove{background:#ffebee;color:#c62828;border:none;padding:8px 12px;border-radius:8px;cursor:pointer;font-size:12px;transition:all .3s}
+.carousel-manager-item .btn-remove:hover,.gallery-manager-item .btn-remove:hover,.promo-manager-item .btn-remove:hover{background:#c62828;color:#fff}
+
+/* MY BOOKINGS */
+.my-bookings-list{display:grid;gap:16px}
+.my-booking-item{background:var(--card-bg);border-radius:16px;padding:20px;border:1px solid var(--border-color);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;transition:all .3s}
+.my-booking-item:hover{border-color:var(--gold);box-shadow:var(--shadow)}
+.my-booking-item .info{flex:1}
+.my-booking-item .info h4{font-size:16px;color:var(--text-color)}
+.my-booking-item .info p{font-size:13px;color:var(--rose-light);margin:4px 0}
+.my-booking-item .status{padding:4px 16px;border-radius:50px;font-size:12px;font-weight:600}
+
+.top5-item{display:flex;align-items:center;gap:12px;padding:8px 0;border-bottom:1px solid var(--border-color)}
+.top5-rank{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .about-grid{grid-template-columns:1fr;gap:40px}
+  .about-image{max-width:420px;margin:0 auto}
+  .footer-grid{grid-template-columns:1fr;gap:32px}
+  .admin-layout{grid-template-columns:1fr}
+  .admin-sidebar{border-radius:24px 24px 0 0;display:flex;flex-wrap:wrap;gap:8px;padding:16px}
+  .admin-sidebar h3{width:100%;margin-bottom:8px}
+  .admin-nav-item{flex:1;min-width:100px;justify-content:center}
+  .gallery-manager-item,.promo-manager-item{flex-direction:column;align-items:stretch}
+  .gallery-manager-item img{width:100%;height:150px}
+}
+@media(max-width:768px){
+  .nav-links{display:none}
+  .hamburger{display:block}
+  .nav-links.mobile-open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--card-bg);padding:24px;gap:16px;box-shadow:0 10px 30px rgba(0,0,0,0.1)}
+  .nav-links.mobile-open a{font-size:16px;padding:12px 0;border-bottom:1px solid var(--border-color);color:var(--text-color)}
+  .services-grid{grid-template-columns:1fr}
+  .section{padding:60px 16px}
+  .modal{margin:16px;border-radius:20px}
+  .modal-body{padding:20px}
+  .time-slots{grid-template-columns:repeat(2,1fr)}
+  .about-stats{grid-template-columns:repeat(3,1fr);gap:10px}
+  .stat-card .number{font-size:36px}
+  .stat-card .label{font-size:13px}
+  .catalog-grid{grid-template-columns:1fr}
+  .deco-select-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .reviews-grid{grid-template-columns:1fr}
+  .my-booking-item{flex-direction:column;align-items:stretch;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== TOAST ===== -->
+<div class="toast-container" id="toastContainer"></div>
+
+<!-- ===== BOTÃO VOLTAR AO TOPO ===== -->
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-chevron-up"></i></button>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <div class="nav-logo" onclick="goHome()">
+      <i class="fas fa-crown"></i>
+      <div class="nav-logo-text">
+        <span>Ingrid Matos</span>
+        <small>Nail Designer</small>
+      </div>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="#about" onclick="closeMobileMenu()">Sobre</a>
+      <a href="#services" onclick="closeMobileMenu()">Servicos</a>
+      <a href="#gallery" onclick="closeMobileMenu()">Galeria</a>
+      <a href="#reviews" onclick="closeMobileMenu()">Avaliacoes</a>
+      <a href="#payment" onclick="closeMobileMenu()">Pagamento</a>
+      <a href="#contact" onclick="closeMobileMenu()">Contato</a>
+    </div>
+    <div class="nav-actions">
+      <button class="theme-toggle" onclick="toggleTheme()" title="Alternar tema"><i class="fas fa-moon" id="themeIcon"></i></button>
+      <button class="nav-catalog-btn" onclick="openCatalogModal()"><i class="fas fa-spa"></i> Catalogo</button>
+      <button class="btn-outline" onclick="openModal('authModal')" id="loginBtn">Entrar</button>
+      <div class="user-menu" id="userMenu" style="display:none">
+        <button class="user-menu-btn" onclick="toggleUserDropdown()">
+          <i class="fas fa-user-circle"></i>
+          <span id="userNameDisplay"></span>
+          <i class="fas fa-chevron-down" style="font-size:10px"></i>
+        </button>
+        <div class="user-dropdown" id="userDropdown">
+          <button class="user-dropdown-item" onclick="openCatalogModal()"><i class="fas fa-spa"></i> Catalogo</button>
+          <button class="user-dropdown-item" onclick="openBooking()"><i class="fas fa-calendar-check"></i> Agendar</button>
+          <button class="user-dropdown-item" onclick="openMyBookings()"><i class="fas fa-list"></i> Meus Agendamentos</button>
+          <button class="user-dropdown-item" onclick="showMyCoupons()"><i class="fas fa-ticket-alt"></i> Meus Cupons</button>
+          <div class="user-dropdown-divider"></div>
+          <button class="user-dropdown-item" onclick="logout()" style="color:#c62828"><i class="fas fa-sign-out-alt" style="color:#c62828"></i> Sair</button>
+        </div>
+      </div>
+      <button class="hamburger" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i></button>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <div class="hero-background" id="heroBackground" style="background:linear-gradient(135deg,#4a1a2e 0%,#6b3050 50%,#4a1a2e 100%)"></div>
+  <div class="hero-background-overlay"></div>
+  <div class="carousel-container">
+    <div class="carousel-wrapper">
+      <div class="carousel-track" id="carouselTrack">
+        <div class="carousel-slide skeleton" style="display:flex;align-items:center;justify-content:center;background:var(--rose-dark);border:none">
+          <p style="color:var(--gold);font-size:18px">Carregando...</p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-dots" id="carouselDots"></div>
+  </div>
+  <button class="carousel-nav prev" onclick="prevSlide()"><i class="fas fa-chevron-left"></i></button>
+  <button class="carousel-nav next" onclick="nextSlide()"><i class="fas fa-chevron-right"></i></button>
+  <div class="hero-footer">
+    <div class="hero-buttons">
+      <button class="btn-gold" onclick="handleAgendar()"><i class="fas fa-calendar-alt"></i> Agendar Horario</button>
+      <button class="btn-outline" onclick="openModal('authModal')" style="border-color:#fff;color:#fff" id="heroSignupBtn"><i class="fas fa-user-plus"></i> Cadastre-se</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="section" id="about">
+  <div class="section-inner section-hidden" id="aboutSection">
+    <div class="about-grid">
+      <div class="about-image" id="aboutImageContainer">
+        <img src="imagem/sobre.jpg" alt="Ingrid Matos" id="aboutPhoto">
+        <div class="about-fallback" style="display:none;flex-direction:column;align-items:center;justify-content:center;color:var(--gold);padding:30px;text-align:center;position:absolute;top:0;left:0;right:0;bottom:0;z-index:1;background:linear-gradient(135deg,var(--rose-dark),#6b2050);pointer-events:none">
+          <i class="fas fa-crown" style="font-size:48px;margin-bottom:12px"></i>
+          <span style="font-family:'Playfair Display',serif;font-size:24px;font-weight:700">Ingrid Matos</span>
+          <small style="font-size:13px;opacity:0.7;margin-top:6px">Nail Designer</small>
+        </div>
+        <div class="about-image-overlay"><h2>Ingrid Matos</h2></div>
+        <div class="about-badge"><i class="fas fa-crown"></i> A RAINHA DO ALONGAMENTO</div>
+      </div>
+      <div class="about-text">
+        <h3 class="gold-text">Especialista em Alongamentos</h3>
+        <p>Com anos de experiencia e paixao pela arte das unhas, <strong>Ingrid Matos</strong> se consolidou como referencia em alongamentos, conquistando o titulo de <strong>"A Rainha do Alongamento"</strong>.</p>
+        <p>Especialista nas tecnicas mais modernas: Acrigel, Molde F1, Polygel e Banho de Gel, oferecendo resultados impecaveis com decoracoes exclusivas que transformam suas unhas em verdadeiras obras de arte.</p>
+        <div class="about-stats">
+          <div class="stat-card"><div class="number gold-text">5+</div><div class="label">Anos</div></div>
+          <div class="stat-card"><div class="number gold-text">2k+</div><div class="label">Clientes</div></div>
+          <div class="stat-card"><div class="number gold-text">4</div><div class="label">Tecnicas</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROMOÇÕES ===== -->
+<section class="section" style="padding-top:0;padding-bottom:0;background:transparent">
+  <div class="section-inner">
+    <div id="promoContainer"></div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="section" id="services">
+  <div class="section-inner section-hidden" id="servicesSection">
+    <div class="section-header">
+      <h2 class="gold-text">Nossos Servicos</h2>
+      <p>Tecnicas especializadas com decoracoes exclusivas</p>
+      <div class="section-divider"></div>
+    </div>
+    <div class="services-grid" id="servicesGrid"></div>
+    <div class="view-more-container">
+      <button class="btn-outline" onclick="openCatalogModal()"><i class="fas fa-spa"></i> Ver Catalogo Completo</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section class="section" id="gallery" style="background:var(--pink-lightest)">
+  <div class="section-inner section-hidden" id="gallerySection">
+    <div class="section-header">
+      <h2 class="gold-text">Galeria de Trabalhos</h2>
+      <p>Confira alguns dos nossos trabalhos realizados</p>
+      <div class="section-divider"></div>
+    </div>
+    <div class="gallery-filters" id="galleryFilters">
+      <button class="active" onclick="filterGallery('all',this)">Todos</button>
+      <button onclick="filterGallery('acrigel',this)">Acrigel</button>
+      <button onclick="filterGallery('molde',this)">Molde F1</button>
+      <button onclick="filterGallery('polygel',this)">Polygel</button>
+      <button onclick="filterGallery('gel',this)">Banho de Gel</button>
+    </div>
+    <div class="gallery-grid" id="galleryGrid"></div>
+  </div>
+</section>
+
+<!-- ===== REVIEWS ===== -->
+<section class="section" id="reviews">
+  <div class="section-inner section-hidden" id="reviewsSection">
+    <div class="section-header">
+      <h2 class="gold-text">Avaliacoes dos Clientes</h2>
+      <p>O que nossas clientes dizem sobre nosso trabalho</p>
+      <div class="section-divider"></div>
+    </div>
+    <div class="reviews-grid" id="reviewsGrid"></div>
+    <div style="text-align:center;margin-top:32px">
+      <button class="btn-gold" onclick="openReviewModal()"><i class="fas fa-star"></i> Avaliar Servico</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PAYMENT ===== -->
+<section class="payment-section" id="payment">
+  <h2 class="gold-text" style="font-family:'Playfair Display',serif;">Formas de Pagamento</h2>
+  <p>Aceitamos diversas formas</p>
+  <div class="payment-methods">
+    <div class="payment-item"><i class="fas fa-credit-card"></i><span>Credito</span></div>
+    <div class="payment-item"><i class="fas fa-credit-card" style="transform:scaleX(-1)"></i><span>Debito</span></div>
+    <div class="payment-item"><i class="fas fa-qrcode"></i><span>PIX</span></div>
+    <div class="payment-item"><i class="fas fa-money-bill-wave"></i><span>Dinheiro</span></div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" id="contact">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <h3><i class="fas fa-crown" style="color:var(--gold);margin-right:8px"></i>Ingrid Matos</h3>
+      <p>A Rainha do Alongamento transforma suas unhas em verdadeiras obras de arte.</p>
+      <a href="https://instagram.com/minninailsrj" target="_blank" class="social-follow-btn" style="margin-top:16px;display:inline-flex">
+        <i class="fab fa-instagram"></i> Seguir no Instagram
+      </a>
+      <div class="social-links-footer">
+        <a href="https://instagram.com/minninailsrj" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/5521985415061" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+      </div>
+      <button class="footer-admin-link" onclick="openModal('adminLoginModal')"><i class="fas fa-lock"></i> Area Admin</button>
+    </div>
+    <div class="footer-col">
+      <h4>Contato</h4>
+      <ul>
+        <li><i class="fas fa-phone"></i> (21) 98541-5061</li>
+        <li><i class="fas fa-map-marker-alt"></i> Av. Joao Ribeiro de Barros, 74</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Redes Sociais</h4>
+      <ul>
+        <li><i class="fab fa-instagram"></i> <a href="https://instagram.com/minninailsrj" target="_blank">@minninailsrj</a></li>
+        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/5521985415061" target="_blank">WhatsApp</a></li>
+        <li><i class="fab fa-facebook"></i> <a href="#" target="_blank">Facebook</a></li>
+        <li><i class="fab fa-youtube"></i> <a href="#" target="_blank">YouTube</a></li>
+        <li><i class="fab fa-tiktok"></i> <a href="#" target="_blank">TikTok</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2025 Ingrid Matos Nail Designer</p></div>
+</footer>
+
+<!-- ============================================================ -->
+<!-- ===== TODOS OS MODAIS ===== -->
+<!-- ============================================================ -->
+
+<!-- ===== MODAL: AUTH ===== -->
+<div class="modal-overlay" id="authModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('authModal')"><i class="fas fa-times"></i></button>
+    <div class="modal-header"><h2 class="gold-text">Bem-vinda</h2></div>
+    <div class="modal-body">
+      <div class="tabs">
+        <button class="tab-btn active" onclick="switchAuthTab('login',this)">Entrar</button>
+        <button class="tab-btn" onclick="switchAuthTab('register',this)">Cadastrar</button>
+      </div>
+      <form id="loginForm" onsubmit="handleLogin(event)">
+        <div class="form-group"><label>E-mail</label><input type="email" id="loginEmail" required placeholder="seu@email.com" autocomplete="email"></div>
+        <div class="form-group"><label>Senha</label><input type="password" id="loginPassword" required minlength="4" autocomplete="current-password"></div>
+        <div class="form-group" style="display:flex;align-items:center;gap:8px">
+          <input type="checkbox" id="rememberMe" style="width:auto">
+          <label for="rememberMe" style="margin:0">Manter-me conectado</label>
+        </div>
+        <button type="submit" class="btn-gold" style="width:100%;justify-content:center;padding:14px;margin-top:8px"><i class="fas fa-sign-in-alt"></i> Entrar</button>
+      </form>
+      <form id="registerForm" style="display:none" onsubmit="handleRegister(event)">
+        <div class="form-group"><label>Nome</label><input type="text" id="regName" required autocomplete="name"></div>
+        <div class="form-group"><label>E-mail</label><input type="email" id="regEmail" required autocomplete="email"></div>
+        <div class="form-group"><label>Celular</label><input type="tel" id="regPhone" required placeholder="(00) 00000-0000" autocomplete="tel"></div>
+        <div class="form-group"><label>Senha</label><input type="password" id="regPassword" required minlength="4" autocomplete="new-password"></div>
+        <div class="form-group"><label>Confirmar</label><input type="password" id="regPasswordConfirm" required minlength="4" autocomplete="new-password"></div>
+        <button type="submit" class="btn-pink" style="width:100%;justify-content:center;padding:14px;margin-top:8px"><i class="fas fa-user-plus"></i> Criar Conta</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MODAL: ADMIN LOGIN ===== -->
+<div class="modal-overlay" id="adminLoginModal">
+  <div class="modal" style="max-width:400px">
+    <button class="modal-close" onclick="closeModal('adminLoginModal')"><i class="fas fa-times"></i></button>
+    <div class="modal-header"><h2 class="gold-text"><i class="fas fa-crown"></i> Area Admin</h2></div>
+    <div class="modal-body">
+      <form onsubmit="handleAdminLogin(event)">
+        <div class="form-group"><label>E-mail</label><input type="email" id="adminLoginEmail" required autocomplete="email"></div>
+        <div class="form-group"><label>Senha</label><input type="password" id="adminLoginPassword" required autocomplete="current-password"></div>
+        <button type="submit" class="btn-gold" style="width:100%;justify-content:center;padding:14px"><i class="fas fa-lock-open"></i> Entrar</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MODAL: CATALOG ===== -->
+<div class="modal-overlay" id="catalogModal">
+  <div class="modal modal-xl">
+    <button class="modal-close" onclick="closeModal('catalogModal')"><i class="fas fa-times"></i></button>
+    <div class="modal-header"><h2 class="gold-text"><i class="fas fa-spa"></i> Catalogo de Servicos</h2><p>Escolha e agende seu servico</p></div>
+    <div class="modal-body"><div class="catalog-grid" id="catalogGrid"></div></div>
+  </div>
+</div>
+
+<!-- ===== MODAL: BOOKING ===== -->
+<div class="modal-overlay" id="bookingModal">
+  <div class="modal modal-lg">
+    <button class="modal-close" onclick="closeBookingModal()"><i class="fas fa-times"></i></button>
+    <div class="modal-header"><h2 class="gold-text">Agendar Horario</h2></div>
+    <div class="modal-body">
+      <div class="booking-steps" id="bookingStepsBar">
+        <div class="step-circle active" id="step1">1</div>
+        <div class="step-line" id="line1"></div>
+        <div class="step-circle" id="step2">2</div>
+        <div class="step-line" id="line2"></div>
+        <div class="step-circle" id="step3">3</div>
+        <div class="step-line" id="line3"></div>
+        <div class="step-circle" id="step4">4</div>
+      </div>
+      <div id="bookStep1">
+        <h4 style="margin-bottom:16px;text-align:center;color:var(--text-color)"><i class="fas fa-spa" style="color:var(--gold);margin-right:8px"></i>Servico</h4>
+        <div id="bookServiceList" style="display:grid;gap:10px;max-height:250px;overflow-y:auto"></div>
+        <div style="margin-top:16px">
+          <h4 style="font-size:13px;color:var(--rose-medium);margin-bottom:8px"><i class="fas fa-gem" style="color:var(--gold);margin-right:6px"></i>Decoracao (opcional)</h4>
+          <div class="deco-select-grid" id="bookDecoGrid"></div>
+        </div>
+        <div style="text-align:right;margin-top:20px"><button class="btn-gold" onclick="goToBookStep(2)">Proximo <i class="fas fa-arrow-right"></i></button></div>
+      </div>
+      <div id="bookStep2" style="display:none">
+        <h4 style="margin-bottom:16px;text-align:center;color:var(--text-color)"><i class="fas fa-calendar" style="color:var(--gold);margin-right:8px"></i>Data</h4>
+        <div class="calendar" id="bookingCalendar"></div>
+        <div style="text-align:right;margin-top:20px;display:flex;gap:10px;justify-content:flex-end">
+          <button class="btn-outline" onclick="goToBookStep(1)">Voltar</button>
+          <button class="btn-gold" onclick="goToBookStep(3)">Proximo</button>
+        </div>
+      </div>
+      <div id="bookStep3" style="display:none">
+        <h4 style="margin-bottom:16px;text-align:center;color:var(--text-color)"><i class="fas fa-clock" style="color:var(--gold);margin-right:8px"></i>Horario</h4>
+        <p style="font-size:13px;color:var(--rose-light);margin-bottom:16px;text-align:center" id="selectedDateDisplay"></p>
+        <div class="time-slots" id="timeSlotsGrid"></div>
+        <div style="text-align:right;margin-top:20px;display:flex;gap:10px;justify-content:flex-end">
+          <button class="btn-outline" onclick="goToBookStep(2)">Voltar</button>
+          <button class="btn-gold" onclick="goToBookStep(4)">Proximo</button>
+        </div>
+      </div>
+      <div id="bookStep4" style="display:none">
+        <h4 style="margin-bottom:16px;text-align:center;color:var(--text-color)"><i class="fas fa-check-circle" style="color:var(--gold);margin-right:8px"></i>Confirmar Agendamento</h4>
+        
+        <!-- CAMPO DE CUPOM - IMPLEMENTADO -->
+        <div style="background:var(--pink-light);padding:16px;border-radius:12px;margin-bottom:16px">
+          <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+            <div style="flex:1;min-width:150px">
+              <label style="font-size:13px;font-weight:500;color:var(--rose-medium);margin-bottom:4px;display:block">
+                <i class="fas fa-ticket-alt" style="color:var(--gold)"></i> Cupom de desconto
+              </label>
+              <input type="text" id="promoCodeInput" placeholder="Digite o código (ex: PRIMEIRA20)" style="padding:10px 14px;border:2px solid var(--border-color);border-radius:10px;font-size:13px;background:var(--card-bg);color:var(--text-color);width:100%;outline:none;transition:all .3s">
+            </div>
+            <button class="btn-gold" onclick="applyPromoCode()" style="padding:10px 20px;font-size:13px;margin-top:18px">
+              <i class="fas fa-check"></i> Aplicar
+            </button>
+            <button class="btn-outline" onclick="removePromoCode()" style="padding:10px 20px;font-size:13px;margin-top:18px;display:none" id="removePromoBtn">
+              <i class="fas fa-times"></i> Remover
+            </button>
+          </div>
+          <div id="promoFeedback" style="font-size:13px;margin-top:8px;display:none"></div>
+        </div>
+        
+        <div class="confirmation-details" id="bookingSummary"></div>
+        
+        <div style="text-align:right;margin-top:20px;display:flex;gap:10px;justify-content:flex-end">
+          <button class="btn-outline" onclick="goToBookStep(3)">Voltar</button>
+          <button class="btn-pink" onclick="confirmBooking()"><i class="fas fa-file-pdf"></i> PDF</button>
+          <button class="btn-pink" onclick="confirmBookingWhatsApp()"><i class="fab fa-whatsapp"></i> WhatsApp</button>
+        </div>
+      </div>
+      <div id="bookConfirmation" style="display:none">
+        <div class="confirmation-box">
+          <div class="check-icon"><i class="fas fa-check"></i></div>
+          <h3 class="gold-text">Agendamento Solicitado!</h3>
+          <div class="confirmation-details" id="confirmationDetails"></div>
+          <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:16px">
+            <button class="btn-gold" onclick="exportPDF()"><i class="fas fa-file-pdf"></i> Baixar Comprovante</button>
+            <button class="btn-pink" onclick="closeBookingModal()">Entendido</button>
+            <button class="btn-outline" onclick="resetAndNewBooking()"><i class="fas fa-plus"></i> Novo Agendamento</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MODAL: MY BOOKINGS ===== -->
+<div class="modal-overlay" id="myBookingsModal">
+  <div class="modal modal-lg">
+    <button class="modal-close" onclick="closeModal('myBookingsModal')"><i class="fas fa-times"></i></button>
+    <div class="modal-header"><h2 class="gold-text"><i class="fas fa-list"></i> Meus Agendamentos</h2></div>
+    <div class="modal-body">
+      <div id="myBookingsList" class="my-bookings-list"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MODAL: REVIEW ===== -->
+<div class="modal-overlay" id="reviewModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('reviewModal')"><i class="fas fa-times"></i></button>
+    <div class="modal-header"><h2 class="gold-text">Avaliar Servico</h2></div>
+    <div class="modal-body">
+      <form onsubmit="submitReview(event)">
+        <div class="form-group">
+          <label>Sua avaliação</label>
+          <div style="display:flex;gap:8px;font-size:30px;color:var(--gold);cursor:pointer" id="starRating">
+            <span onclick="setRating(1)">☆</span>
+            <span onclick="setRating(2)">☆</span>
+            <span onclick="setRating(3)">☆</span>
+            <span onclick="setRating(4)">☆</span>
+            <span onclick="setRating(5)">☆</span>
+          </div>
+          <input type="hidden" id="reviewRating" value="0">
+        </div>
+        <div class="form-group">
+          <label>Comentário</label>
+          <textarea id="reviewText" rows="4" placeholder="Conte-nos sobre sua experiência..." required></textarea>
+        </div>
+        <div class="form-group">
+          <label>Seu nome</label>
+          <input type="text" id="reviewAuthor" required placeholder="Seu nome" autocomplete="name">
+        </div>
+        <button type="submit" class="btn-gold" style="width:100%;justify-content:center"><i class="fas fa-star"></i> Enviar Avaliação</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MODAL: ADMIN ===== -->
+<div class="modal-overlay" id="adminModal">
+  <div class="modal modal-xl">
+    <button class="modal-close" onclick="closeAdmin()"><i class="fas fa-times"></i></button>
+    <div class="modal-header"><h2 class="gold-text"><i class="fas fa-crown"></i> Painel Admin</h2></div>
+    <div class="modal-body" style="padding:0">
+      <div class="admin-layout">
+        <div class="admin-sidebar">
+          <h3><i class="fas fa-crown"></i> Admin</h3>
+          <button class="admin-nav-item active" onclick="switchAdminTab('dashboard',this)"><i class="fas fa-chart-bar"></i> Dashboard</button>
+          <button class="admin-nav-item" onclick="switchAdminTab('services',this)"><i class="fas fa-spa"></i> Servicos</button>
+          <button class="admin-nav-item" onclick="switchAdminTab('decorations',this)"><i class="fas fa-gem"></i> Decoracoes</button>
+          <button class="admin-nav-item" onclick="switchAdminTab('bookings',this)"><i class="fas fa-calendar-check"></i> Agendamentos</button>
+          <button class="admin-nav-item" onclick="switchAdminTab('gallery',this)"><i class="fas fa-images"></i> Galeria</button>
+          <button class="admin-nav-item" onclick="switchAdminTab('promotions',this)"><i class="fas fa-tags"></i> Promocoes</button>
+          <button class="admin-nav-item" onclick="switchAdminTab('carousel',this)"><i class="fas fa-sliders-h"></i> Carrossel</button>
+          <button class="admin-nav-item" onclick="switchAdminTab('background',this)"><i class="fas fa-image"></i> Fundo</button>
+          <button class="admin-nav-item" onclick="switchAdminTab('about',this)"><i class="fas fa-portrait"></i> Foto Sobre</button>
+          <button class="admin-nav-item" onclick="switchAdminTab('users',this)"><i class="fas fa-users"></i> Usuarios</button>
+          <button class="admin-nav-item" onclick="switchAdminTab('reports',this)"><i class="fas fa-file-alt"></i> Relatorios</button>
+          <button class="admin-nav-item" onclick="switchAdminTab('coupons',this)"><i class="fas fa-ticket-alt"></i> Cupons Usados</button>
+        </div>
+        <div class="admin-content">
+          <!-- Dashboard -->
+          <div class="admin-section active" id="adminDashboard">
+            <h3>Dashboard</h3>
+            <div id="adminStats" style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:24px"></div>
+            <div style="background:var(--card-bg);padding:20px;border-radius:16px;margin-bottom:24px">
+              <h4 style="margin-bottom:16px;color:var(--text-color)">Receita Mensal</h4>
+              <canvas id="revenueChart" height="200"></canvas>
+            </div>
+            <div id="recentBookings"></div>
+          </div>
+          <!-- Services -->
+          <div class="admin-section" id="adminServices">
+            <h3>Servicos</h3>
+            <button class="btn-sm add" onclick="toggleAddService()"><i class="fas fa-plus"></i> Adicionar Servico</button>
+            <div id="addServiceForm" style="display:none;background:var(--pink-light);padding:20px;border-radius:12px;margin-bottom:20px">
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+                <div class="form-group"><label>Nome</label><input type="text" id="newServName" placeholder="Ex: Acrigel - Colocacao"></div>
+                <div class="form-group"><label>Categoria</label><input type="text" id="newServCategory" placeholder="Ex: Acrigel"></div>
+                <div class="form-group"><label>Tipo</label><select id="newServType"><option value="colocacao">Colocacao</option><option value="manutencao">Manutencao</option><option value="unico">Unico</option></select></div>
+                <div class="form-group"><label>Valor (R$)</label><input type="number" id="newServPrice" step="0.01" min="0"></div>
+                <div class="form-group" style="grid-column:span 2"><label>Imagem</label><input type="text" id="newServImage" placeholder="imagem/servico.jpg"></div>
+              </div>
+              <div style="display:flex;gap:10px;margin-top:12px">
+                <button class="btn-gold" onclick="saveNewService()"><i class="fas fa-save"></i> Salvar</button>
+                <button class="btn-outline" onclick="toggleAddService()">Cancelar</button>
+              </div>
+            </div>
+            <table class="admin-table"><thead><tr><th>Servico</th><th>Categoria</th><th>Tipo</th><th>Valor</th><th>Visualizacoes</th><th>Imagem</th><th>Acoes</th></tr></thead><tbody id="adminServicesTable"></tbody></table>
+          </div>
+          <!-- Decorations -->
+          <div class="admin-section" id="adminDecorations">
+            <h3>Decoracoes</h3>
+            <button class="btn-sm add" onclick="toggleAddDecor()"><i class="fas fa-plus"></i> Adicionar Decoracao</button>
+            <div id="addDecorForm" style="display:none;background:var(--pink-light);padding:20px;border-radius:12px;margin-bottom:20px">
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+                <div class="form-group"><label>Nome</label><input type="text" id="newDecorName" placeholder="Ex: Pedrinha"></div>
+                <div class="form-group"><label>Valor (R$)</label><input type="number" id="newDecorPrice" step="0.01" min="0"></div>
+              </div>
+              <div style="display:flex;gap:10px;margin-top:12px">
+                <button class="btn-gold" onclick="saveNewDecor()"><i class="fas fa-save"></i> Salvar</button>
+                <button class="btn-outline" onclick="toggleAddDecor()">Cancelar</button>
+              </div>
+            </div>
+            <table class="admin-table"><thead><tr><th>Decoracao</th><th>Valor</th><th>Acoes</th></tr></thead><tbody id="adminDecorTable"></tbody></table>
+          </div>
+          <!-- Bookings -->
+          <div class="admin-section" id="adminBookings">
+            <h3>Agendamentos</h3>
+            <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px">
+              <input type="date" id="filterDate" onchange="renderAdminBookings()" style="width:auto">
+              <input type="text" id="filterClient" placeholder="Filtrar por cliente" oninput="renderAdminBookings()" style="width:200px">
+              <select id="filterStatus" onchange="renderAdminBookings()" style="width:auto">
+                <option value="">Todos os status</option>
+                <option value="pending">Pendente</option>
+                <option value="confirmed">Confirmado</option>
+                <option value="cancelled">Cancelado</option>
+              </select>
+              <button class="btn-gold" onclick="exportAdminBookings()"><i class="fas fa-file-csv"></i> Exportar CSV</button>
+            </div>
+            <table class="admin-table"><thead><tr><th>Cliente</th><th>Servico</th><th>Decoracao</th><th>Data</th><th>Horario</th><th>Valor</th><th>Status</th><th>Acoes</th></tr></thead><tbody id="adminBookingsTable"></tbody></table>
+          </div>
+          <!-- Gallery -->
+          <div class="admin-section" id="adminGallery">
+            <h3>Gerenciar Galeria</h3>
+            <p style="font-size:13px;color:var(--rose-light);margin-bottom:16px">Adicione, edite ou remova imagens da galeria de trabalhos.</p>
+            <button class="btn-sm add" onclick="addGalleryImage()"><i class="fas fa-plus"></i> Adicionar Imagem</button>
+            <div id="galleryManager" style="margin-top:16px"></div>
+          </div>
+          <!-- Promotions -->
+          <div class="admin-section" id="adminPromotions">
+            <h3>Gerenciar Promoções</h3>
+            <p style="font-size:13px;color:var(--rose-light);margin-bottom:16px">Crie e gerencie banners de promoção.</p>
+            <button class="btn-sm add" onclick="addPromotion()"><i class="fas fa-plus"></i> Adicionar Promoção</button>
+            <div id="promoManager" style="margin-top:16px"></div>
+          </div>
+          <!-- Carousel -->
+          <div class="admin-section" id="adminCarousel">
+            <h3>Gerenciar Carrossel</h3>
+            <p style="font-size:13px;color:var(--rose-light);margin-bottom:16px">Imagens do carrossel principal.</p>
+            <div id="carouselManager"></div>
+            <button class="btn-gold" onclick="addCarouselImage()" style="margin-top:16px"><i class="fas fa-plus"></i> Adicionar Imagem</button>
+          </div>
+          <!-- Background -->
+          <div class="admin-section" id="adminBackground">
+            <h3>Imagem de Fundo</h3>
+            <div style="background:var(--pink-light);padding:24px;border-radius:16px">
+              <div style="text-align:center;margin-bottom:20px">
+                <img id="adminBgPreview" style="max-width:100%;max-height:200px;border-radius:12px;border:3px solid var(--gold-light);display:none">
+                <div id="noBgPreview" style="padding:40px;background:linear-gradient(135deg,var(--rose-dark),#6b2050);border-radius:12px;color:#fff;text-align:center">
+                  <i class="fas fa-image" style="font-size:32px;margin-bottom:8px;opacity:0.5"></i>
+                  <p style="font-size:13px;opacity:0.7">Nenhuma imagem definida</p>
+                </div>
+              </div>
+              <div class="form-group"><label>URL da imagem</label><input type="text" id="heroBgUrl" placeholder="imagem/fundo.jpg"></div>
+              <div class="form-group"><label>Ou selecione um arquivo</label><input type="file" id="heroBgFile" accept="image/*" onchange="previewHeroBg(this)" style="padding:10px"></div>
+              <div style="display:flex;gap:10px;flex-wrap:wrap">
+                <button class="btn-gold" onclick="saveHeroBackground()"><i class="fas fa-save"></i> Salvar</button>
+                <button class="btn-outline" onclick="removeHeroBackground()"><i class="fas fa-trash"></i> Remover</button>
+              </div>
+            </div>
+          </div>
+          <!-- About -->
+          <div class="admin-section" id="adminAbout">
+            <h3>Foto "Sobre"</h3>
+            <div style="background:var(--pink-light);padding:24px;border-radius:16px">
+              <div style="text-align:center;margin-bottom:20px">
+                <img id="adminAboutPreview" src="imagem/sobre.jpg" onerror="handleImageError(this)" style="max-width:250px;max-height:350px;object-fit:cover;border-radius:16px;border:3px solid var(--gold-light)">
+              </div>
+              <div class="form-group">
+                <label>URL da imagem (ou cole o código base64)</label>
+                <textarea id="adminAboutUrl" rows="3" placeholder="https://exemplo.com/foto.jpg ou data:image/jpeg;base64,..." style="resize:vertical;min-height:60px;width:100%;padding:12px 16px;border:2px solid var(--border-color);border-radius:12px;font-size:14px;background:var(--card-bg);color:var(--text-color);font-family:'Poppins',sans-serif"></textarea>
+              </div>
+              <div class="form-group">
+                <label>Ou selecione um arquivo</label>
+                <input type="file" id="adminAboutFile" accept="image/*" onchange="previewAboutFile(this)" style="padding:10px">
+              </div>
+              <button class="btn-gold" onclick="saveAboutPhoto()"><i class="fas fa-save"></i> Salvar Foto</button>
+              <button class="btn-outline" onclick="resetAboutPhoto()" style="margin-left:10px"><i class="fas fa-undo"></i> Restaurar Padrão</button>
+            </div>
+          </div>
+          <!-- Users -->
+          <div class="admin-section" id="adminUsers">
+            <h3>Usuarios</h3>
+            <table class="admin-table"><thead><tr><th>Nome</th><th>E-mail</th><th>Celular</th><th>Cadastro</th><th>Acoes</th></tr></thead><tbody id="adminUsersTable"></tbody></table>
+          </div>
+          <!-- Reports -->
+          <div class="admin-section" id="adminReports">
+            <h3>Relatorios</h3>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+              <div style="background:var(--card-bg);padding:20px;border-radius:16px;border:1px solid var(--border-color)">
+                <h4>Receita Total: <span class="gold-text" id="reportTotalRevenue">R$ 0,00</span></h4>
+                <p style="font-size:13px;color:var(--rose-light)">Total de agendamentos: <span id="reportTotalBookings">0</span></p>
+                <button class="btn-gold" onclick="exportFullReport()" style="margin-top:16px"><i class="fas fa-file-pdf"></i> Exportar Relatorio Completo</button>
+              </div>
+              <div style="background:var(--card-bg);padding:20px;border-radius:16px;border:1px solid var(--border-color)">
+                <h4>Serviço Mais Popular</h4>
+                <p id="reportTopService" style="font-size:18px;color:var(--gold);font-weight:600">-</p>
+                <p style="font-size:13px;color:var(--rose-light)">Total de agendamentos: <span id="reportTopServiceCount">0</span></p>
+              </div>
+            </div>
+          </div>
+          <!-- Coupons Used -->
+          <div class="admin-section" id="adminCoupons">
+            <h3>Cupons Usados por Cliente</h3>
+            <p style="font-size:13px;color:var(--rose-light);margin-bottom:16px">Histórico de cupons utilizados por cada cliente.</p>
+            <table class="admin-table">
+              <thead><tr><th>Cliente (E-mail)</th><th>Cupons Utilizados</th><th>Total</th></tr></thead>
+              <tbody id="adminCouponsTable"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MODAL: EDIT SERVICE ===== -->
+<div class="modal-overlay" id="editServiceModal">
+  <div class="modal" style="max-width:450px">
+    <button class="modal-close" onclick="closeModal('editServiceModal')"><i class="fas fa-times"></i></button>
+    <div class="modal-header"><h2 class="gold-text">Editar Servico</h2></div>
+    <div class="modal-body">
+      <input type="hidden" id="editServId">
+      <div class="form-group"><label>Nome</label><input type="text" id="editServName"></div>
+      <div class="form-group"><label>Categoria</label><input type="text" id="editServCategory"></div>
+      <div class="form-group"><label>Tipo</label><select id="editServType"><option value="colocacao">Colocacao</option><option value="manutencao">Manutencao</option><option value="unico">Unico</option></select></div>
+      <div class="form-group"><label>Valor (R$)</label><input type="number" id="editServPrice" step="0.01"></div>
+      <div class="form-group"><label>Imagem</label><input type="text" id="editServImage" placeholder="imagem/servico.jpg"></div>
+      <button class="btn-gold" onclick="saveEditService()" style="width:100%;justify-content:center"><i class="fas fa-save"></i> Salvar</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MODAL: EDIT DECOR ===== -->
+<div class="modal-overlay" id="editDecorModal">
+  <div class="modal" style="max-width:400px">
+    <button class="modal-close" onclick="closeModal('editDecorModal')"><i class="fas fa-times"></i></button>
+    <div class="modal-header"><h2 class="gold-text">Editar Decoracao</h2></div>
+    <div class="modal-body">
+      <input type="hidden" id="editDecorId">
+      <div class="form-group"><label>Nome</label><input type="text" id="editDecorName"></div>
+      <div class="form-group"><label>Valor (R$)</label><input type="number" id="editDecorPrice" step="0.01" min="0"></div>
+      <button class="btn-gold" onclick="saveEditDecor()" style="width:100%;justify-content:center"><i class="fas fa-save"></i> Salvar</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- ===== JAVASCRIPT COMPLETO ===== -->
+<!-- ============================================================ -->
+<script>
+// ============================================================
+// VARIÁVEIS GLOBAIS
+// ============================================================
+var services = [
+  {id:1,name:'Acrigel - Colocacao',category:'Acrigel',type:'colocacao',price:120,image:'imagem/acrigel-colocacao.jpg',views:0},
+  {id:2,name:'Acrigel - Manutencao',category:'Acrigel',type:'manutencao',price:80,image:'imagem/acrigel-manutencao.jpg',views:0},
+  {id:3,name:'Molde F1 - Colocacao',category:'Molde F1',type:'colocacao',price:130,image:'imagem/molde-colocacao.jpg',views:0},
+  {id:4,name:'Molde F1 - Manutencao',category:'Molde F1',type:'manutencao',price:85,image:'imagem/molde-manutencao.jpg',views:0},
+  {id:5,name:'Polygel - Colocacao',category:'Polygel',type:'colocacao',price:140,image:'imagem/polygel-colocacao.jpg',views:0},
+  {id:6,name:'Polygel - Manutencao',category:'Polygel',type:'manutencao',price:90,image:'imagem/polygel-manutencao.jpg',views:0},
+  {id:7,name:'Banho de Gel',category:'Banho de Gel',type:'unico',price:70,image:'imagem/banho-gel.jpg',views:0}
+];
+
+var decorations = [
+  {id:1,name:'PEDRINHA',price:10},{id:2,name:'FRENCHINA CLASSICA',price:15},
+  {id:3,name:'EFEITO MARMORE',price:20},{id:4,name:'BABY BOOMER',price:20},
+  {id:5,name:'CROMADO',price:25},{id:6,name:'PINTURA A MAO',price:15},
+  {id:7,name:'DESENHO EM GEL',price:20},{id:8,name:'FRENCHINHA COLORIDA',price:18},
+  {id:9,name:'FOLIO/OURO FOLHA',price:25},{id:10,name:'CHARMES / PIERCINGS',price:10},
+  {id:11,name:'DEGRADE / OMBRE',price:20},{id:12,name:'ROSAS 3D',price:30},
+  {id:13,name:'GLITTER',price:10},{id:14,name:'ADESIVOS',price:8},
+  {id:15,name:'PIXEL ART',price:25},{id:16,name:'FORMATOS EUROPEUS',price:15},
+  {id:17,name:'EXTRA LONGOS',price:20},{id:18,name:'DOUBLE FACE',price:20}
+];
+
+var carouselImages = [
+  'imagem/carrossel1.jpg','imagem/carrossel2.jpg','imagem/carrossel3.jpg',
+  'imagem/carrossel4.jpg','imagem/carrossel5.jpg','imagem/carrossel6.jpg'
+];
+
+var galleryImages = [
+  {id:1,url:'imagem/galeria1.jpg',category:'acrigel',title:'Acrigel com Pedrinhas'},
+  {id:2,url:'imagem/galeria2.jpg',category:'molde',title:'Molde F1 Francês'},
+  {id:3,url:'imagem/galeria3.jpg',category:'polygel',title:'Polygel Decorado'},
+  {id:4,url:'imagem/galeria4.jpg',category:'gel',title:'Banho de Gel'},
+  {id:5,url:'imagem/galeria5.jpg',category:'acrigel',title:'Acrigel Cromado'},
+  {id:6,url:'imagem/galeria6.jpg',category:'molde',title:'Molde F1 Extra Longo'},
+  {id:7,url:'imagem/galeria7.jpg',category:'polygel',title:'Polygel Baby Boomer'},
+  {id:8,url:'imagem/galeria8.jpg',category:'gel',title:'Banho de Gel Decorado'}
+];
+
+var promotions = [
+  {id:1,title:'Promoção Especial',description:'Na primeira manutenção com qualquer serviço',discount:'20% OFF',code:'PRIMEIRA20',active:true},
+  {id:2,title:'Pacote Completo',description:'Colocação + Manutenção com 15% de desconto',discount:'15% OFF',code:'PACOTE15',active:true}
+];
+
+var reviews = [
+  {id:1,author:'Mariana S.',rating:5,text:'A Ingrid é simplesmente incrível! Minhas unhas ficaram perfeitas, super recomendo!',date:'2025-01-15'},
+  {id:2,author:'Carla R.',rating:5,text:'Melhor nail designer que já conheci. Atenção aos detalhes impecável.',date:'2025-01-20'},
+  {id:3,author:'Ana P.',rating:4,text:'Adorei o serviço! A decoração ficou linda, vou voltar sempre.',date:'2025-01-25'}
+];
+
+var users = [];
+var bookings = [];
+var currentUser = null;
+var isAdmin = false;
+var selectedService = null;
+var selectedDeco = null;
+var selectedDate = null;
+var selectedTime = null;
+var calendarMonth = new Date().getMonth();
+var calendarYear = new Date().getFullYear();
+var currentPage = 0;
+var autoSlideInterval;
+var currentBooking = null;
+var chartInstance = null;
+var slidesPerView = 6;
+
+// Variáveis para promoção
+var appliedPromo = null;
+var usedCoupons = {};
+
+// ============================================================
+// FUNÇÃO PARA TRATAR ERROS DE IMAGEM
+// ============================================================
+function handleImageError(img) {
+  if (!img) return;
+  img.onerror = null;
+  
+  var parent = img.parentElement;
+  
+  if (img.id === 'aboutPhoto') {
+    img.style.display = 'none';
+    var fallback = parent.querySelector('.about-fallback');
+    if (fallback) {
+      fallback.classList.add('show');
+    }
+    return;
+  }
+  
+  if (img.id === 'adminAboutPreview') {
+    img.style.display = 'none';
+    var msg = document.createElement('div');
+    msg.style.cssText = 'display:flex;align-items:center;justify-content:center;padding:40px;background:var(--pink-light);border-radius:12px;color:var(--rose-light);font-size:14px';
+    msg.textContent = '📸 Imagem não encontrada';
+    parent.appendChild(msg);
+    return;
+  }
+  
+  if (parent && parent.classList.contains('carousel-slide')) {
+    img.style.display = 'none';
+    if (!parent.querySelector('.carousel-fallback')) {
+      var fallbackDiv = document.createElement('div');
+      fallbackDiv.className = 'carousel-fallback';
+      fallbackDiv.style.cssText = 'width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--rose-dark),#6b2050);color:var(--gold);font-size:36px';
+      fallbackDiv.innerHTML = '<i class="fas fa-crown"></i>';
+      parent.appendChild(fallbackDiv);
+    }
+    return;
+  }
+  
+  if (parent && (parent.classList.contains('service-card-image') || parent.classList.contains('catalog-card-image'))) {
+    img.style.display = 'none';
+    if (!parent.querySelector('.placeholder')) {
+      var placeholder = document.createElement('div');
+      placeholder.className = 'placeholder';
+      placeholder.style.cssText = 'width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:var(--rose-light);font-size:48px';
+      placeholder.innerHTML = '<i class="fas fa-spa"></i>';
+      parent.appendChild(placeholder);
+    }
+    return;
+  }
+  
+  if (parent && parent.classList.contains('gallery-item')) {
+    img.style.display = 'none';
+    if (!parent.querySelector('.gallery-fallback')) {
+      var galleryFallback = document.createElement('div');
+      galleryFallback.className = 'gallery-fallback';
+      galleryFallback.style.cssText = 'display:flex;align-items:center;justify-content:center;width:100%;height:100%;background:var(--pink-soft);color:var(--rose-light);font-size:48px';
+      galleryFallback.innerHTML = '<i class="fas fa-image"></i>';
+      parent.appendChild(galleryFallback);
+    }
+    return;
+  }
+  
+  img.style.display = 'none';
+}
+
+// ============================================================
+// FUNÇÃO PARA FORMATAR DATA EM PORTUGUÊS
+// ============================================================
+function formatDateToPortuguese(dateStr) {
+  if (!dateStr) return '-';
+  var parts = dateStr.split('-');
+  if (parts.length !== 3) return dateStr;
+  return parts[2] + '/' + parts[1] + '/' + parts[0];
+}
+
+// ============================================================
+// FUNÇÕES DE PERSISTÊNCIA
+// ============================================================
+function loadData() {
+  try {
+    var su = localStorage.getItem('nailUsers');
+    if (su) users = JSON.parse(su);
+    var sb = localStorage.getItem('nailBookings');
+    if (sb) bookings = JSON.parse(sb);
+    var ss = localStorage.getItem('nailServices');
+    if (ss) services = JSON.parse(ss);
+    var sc = localStorage.getItem('nailCarousel');
+    if (sc) carouselImages = JSON.parse(sc);
+    var sd = localStorage.getItem('nailDecorations');
+    if (sd) { var p = JSON.parse(sd); if (p.length > 0) decorations = p; }
+    var sr = localStorage.getItem('nailReviews');
+    if (sr) reviews = JSON.parse(sr);
+    var sg = localStorage.getItem('nailGallery');
+    if (sg) galleryImages = JSON.parse(sg);
+    var sp = localStorage.getItem('nailPromotions');
+    if (sp) promotions = JSON.parse(sp);
+    var lu = localStorage.getItem('nailCurrentUser');
+    if (lu) { currentUser = JSON.parse(lu); }
+    loadUsedCoupons();
+  } catch(e) { console.warn('Erro ao carregar dados:', e); }
+  
+  if (users.length === 0) {
+    users.push({
+      id: 1,
+      name: 'Admin',
+      email: 'admin@ingridmatos.com',
+      phone: '(21) 98541-5061',
+      password: 'admin123',
+      createdAt: new Date().toISOString()
+    });
+    saveData();
+  }
+}
+
+function saveData() {
+  try {
+    localStorage.setItem('nailUsers', JSON.stringify(users));
+    localStorage.setItem('nailBookings', JSON.stringify(bookings));
+    localStorage.setItem('nailServices', JSON.stringify(services));
+    localStorage.setItem('nailCarousel', JSON.stringify(carouselImages));
+    localStorage.setItem('nailDecorations', JSON.stringify(decorations));
+    localStorage.setItem('nailReviews', JSON.stringify(reviews));
+    localStorage.setItem('nailGallery', JSON.stringify(galleryImages));
+    localStorage.setItem('nailPromotions', JSON.stringify(promotions));
+    if (currentUser) {
+      localStorage.setItem('nailCurrentUser', JSON.stringify(currentUser));
+    } else {
+      localStorage.removeItem('nailCurrentUser');
+    }
+    saveUsedCoupons();
+  } catch(e) { console.warn('Erro ao salvar dados:', e); }
+}
+
+// ============================================================
+// FUNÇÕES DE CUPOM POR USUÁRIO
+// ============================================================
+function loadUsedCoupons() {
+  try {
+    var data = localStorage.getItem('nailUsedCoupons');
+    if (data) {
+      usedCoupons = JSON.parse(data);
+    }
+  } catch(e) {
+    usedCoupons = {};
+  }
+}
+
+function saveUsedCoupons() {
+  try {
+    localStorage.setItem('nailUsedCoupons', JSON.stringify(usedCoupons));
+  } catch(e) {
+    console.warn('Erro ao salvar cupons usados:', e);
+  }
+}
+
+function hasUserUsedCoupon(email, couponCode) {
+  if (!email || !couponCode) return false;
+  if (usedCoupons[email]) {
+    return usedCoupons[email].includes(couponCode.toUpperCase());
+  }
+  return false;
+}
+
+function registerCouponUsage(email, couponCode) {
+  if (!email || !couponCode) return;
+  if (!usedCoupons[email]) {
+    usedCoupons[email] = [];
+  }
+  if (!usedCoupons[email].includes(couponCode.toUpperCase())) {
+    usedCoupons[email].push(couponCode.toUpperCase());
+    saveUsedCoupons();
+  }
+}
+
+function getUserCouponHistory(email) {
+  if (!email) return [];
+  return usedCoupons[email] || [];
+}
+
+function showMyCoupons() {
+  if (!currentUser) {
+    showToast('Faça login para ver seus cupons', 'info');
+    openModal('authModal');
+    return;
+  }
+  
+  var used = getUserCouponHistory(currentUser.email);
+  
+  if (used.length === 0) {
+    showToast('📋 Você ainda não usou nenhum cupom.', 'info');
+    return;
+  }
+  
+  var message = '📋 Cupons já utilizados por você:\n\n';
+  used.forEach(function(code, index) {
+    message += (index + 1) + '. ' + code + '\n';
+  });
+  message += '\n💡 Cada cupom só pode ser usado uma vez por cliente.';
+  alert(message);
+}
+
+function getAvailableCouponsForUser(email) {
+  if (!email) return [];
+  var used = getUserCouponHistory(email);
+  var available = promotions.filter(function(p) {
+    return p.active === true && !used.includes(p.code.toUpperCase());
+  });
+  return available;
+}
+
+// ============================================================
+// FUNÇÃO PARA APLICAR CUPOM
+// ============================================================
+function applyPromoCode() {
+  var input = document.getElementById('promoCodeInput');
+  var feedback = document.getElementById('promoFeedback');
+  var removeBtn = document.getElementById('removePromoBtn');
+  var code = input.value.trim().toUpperCase();
+  
+  if (!code) {
+    feedback.style.display = 'block';
+    feedback.style.color = 'var(--rose-light)';
+    feedback.innerHTML = 'Digite um código de cupom';
+    return;
+  }
+  
+  if (!currentUser) {
+    feedback.style.display = 'block';
+    feedback.style.color = '#c62828';
+    feedback.innerHTML = '❌ Faça login para usar cupons';
+    input.style.borderColor = '#c62828';
+    return;
+  }
+  
+  var promo = promotions.find(function(p) {
+    return p.active === true && p.code.toUpperCase() === code;
+  });
+  
+  if (!promo) {
+    feedback.style.display = 'block';
+    feedback.style.color = '#c62828';
+    feedback.innerHTML = '❌ Código inválido ou expirado';
+    input.style.borderColor = '#c62828';
+    return;
+  }
+  
+  var userEmail = currentUser.email;
+  if (hasUserUsedCoupon(userEmail, code)) {
+    feedback.style.display = 'block';
+    feedback.style.color = '#c62828';
+    feedback.innerHTML = '❌ Você já utilizou este cupom anteriormente!<br><small style="font-size:11px;opacity:0.8">Cada cliente só pode usar cada cupom uma vez.</small>';
+    input.style.borderColor = '#c62828';
+    return;
+  }
+  
+  appliedPromo = promo;
+  input.style.borderColor = '#2e7d32';
+  feedback.style.display = 'block';
+  feedback.style.color = '#2e7d32';
+  feedback.innerHTML = '✅ Cupom aplicado! Desconto de ' + promo.discount + 
+                       '<br><small style="font-size:11px;opacity:0.8">Este cupom foi registrado para o seu email.</small>';
+  removeBtn.style.display = 'inline-flex';
+  
+  renderBookingSummary();
+  showToast('Cupom aplicado com sucesso!', 'success');
+}
+
+function removePromoCode() {
+  appliedPromo = null;
+  var input = document.getElementById('promoCodeInput');
+  var feedback = document.getElementById('promoFeedback');
+  var removeBtn = document.getElementById('removePromoBtn');
+  
+  input.value = '';
+  input.style.borderColor = 'var(--border-color)';
+  feedback.style.display = 'none';
+  removeBtn.style.display = 'none';
+  
+  renderBookingSummary();
+  showToast('Cupom removido', 'info');
+}
+
+function calculateDiscount(subtotal) {
+  if (!appliedPromo) return { discount: 0, total: subtotal };
+  
+  var discount = 0;
+  var percentage = 0;
+  var discountText = appliedPromo.discount;
+  
+  if (discountText.includes('%')) {
+    percentage = parseFloat(discountText.replace('%', '').replace('OFF', '').trim());
+    discount = (subtotal * percentage) / 100;
+  } else if (discountText.includes('R$')) {
+    discount = parseFloat(discountText.replace('R$', '').replace(',', '.').trim());
+  } else {
+    var numMatch = discountText.match(/\d+([,.]\d+)?/);
+    if (numMatch) {
+      discount = parseFloat(numMatch[0].replace(',', '.'));
+    }
+  }
+  
+  if (discount > subtotal) discount = subtotal;
+  
+  return {
+    discount: discount,
+    percentage: percentage,
+    total: subtotal - discount
+  };
+}
+
+// ============================================================
+// RENDERIZAR CUPONS NO ADMIN
+// ============================================================
+function renderAdminCoupons() {
+  var tbody = document.getElementById('adminCouponsTable');
+  if (!tbody) return;
+  
+  var emails = Object.keys(usedCoupons);
+  if (emails.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="3" style="text-align:center;color:var(--rose-light)">Nenhum cupom utilizado ainda.</td></tr>';
+    return;
+  }
+  
+  tbody.innerHTML = emails.map(function(email) {
+    var coupons = usedCoupons[email] || [];
+    return '<tr>' +
+      '<td>' + email + '</td>' +
+      '<td>' + coupons.join(', ') + '</td>' +
+      '<td>' + coupons.length + '</td>' +
+      '</tr>';
+  }).join('');
+}
+
+// ============================================================
+// FUNÇÕES DE UI HELPERS
+// ============================================================
+function showToast(message, type) {
+  type = type || 'info';
+  var container = document.getElementById('toastContainer');
+  if (!container) return;
+  var toast = document.createElement('div');
+  toast.className = 'toast ' + type;
+  var icon = type === 'success' ? 'check-circle' : (type === 'error' ? 'exclamation-circle' : 'info-circle');
+  toast.innerHTML = '<i class="fas fa-' + icon + '"></i> ' + message;
+  container.appendChild(toast);
+  setTimeout(function() { toast.classList.add('show'); }, 10);
+  setTimeout(function() {
+    toast.classList.remove('show');
+    setTimeout(function() { toast.remove(); }, 400);
+  }, 3500);
+}
+
+function openModal(id) { document.getElementById(id).classList.add('active'); }
+function closeModal(id) { document.getElementById(id).classList.remove('active'); }
+function goHome() { window.scrollTo({top:0,behavior:'smooth'}); closeMobileMenu(); }
+function toggleMobileMenu() { document.getElementById('navLinks').classList.toggle('mobile-open'); }
+function closeMobileMenu() { document.getElementById('navLinks').classList.remove('mobile-open'); }
+function toggleUserDropdown() { document.getElementById('userDropdown').classList.toggle('show'); }
+
+// ============================================================
+// AUTENTICAÇÃO
+// ============================================================
+function switchAuthTab(tab, btn) {
+  document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
+  btn.classList.add('active');
+  document.getElementById('loginForm').style.display = tab === 'login' ? 'block' : 'none';
+  document.getElementById('registerForm').style.display = tab === 'register' ? 'block' : 'none';
+}
+
+function handleLogin(e) {
+  e.preventDefault();
+  var email = document.getElementById('loginEmail').value;
+  var pass = document.getElementById('loginPassword').value;
+  var remember = document.getElementById('rememberMe').checked;
+  var user = users.find(function(u) { return u.email === email && u.password === pass; });
+  if (user) {
+    currentUser = user;
+    saveData();
+    if (remember) {
+      localStorage.setItem('nailRememberedUser', JSON.stringify({email: email, password: pass}));
+    } else {
+      localStorage.removeItem('nailRememberedUser');
+    }
+    updateUIForUser();
+    closeModal('authModal');
+    showToast('Bem-vinda, ' + user.name.split(' ')[0] + '!', 'success');
+    
+    // ===== LINHAS QUE LIMPAM OS CAMPOS =====
+    document.getElementById('loginEmail').value = '';
+    document.getElementById('loginPassword').value = '';
+    document.getElementById('rememberMe').checked = false;
+    // ========================================
+    
+    requestNotificationPermission();
+  } else {
+    showToast('E-mail ou senha incorretos', 'error');
+  }
+}
+
+function handleRegister(e) {
+  e.preventDefault();
+  var name = document.getElementById('regName').value;
+  var email = document.getElementById('regEmail').value;
+  var phone = document.getElementById('regPhone').value;
+  var pass = document.getElementById('regPassword').value;
+  var passConfirm = document.getElementById('regPasswordConfirm').value;
+  
+  if (pass !== passConfirm) { showToast('As senhas nao coincidem', 'error'); return; }
+  if (users.find(function(u) { return u.email === email; })) { 
+    showToast('Este e-mail ja esta cadastrado', 'error'); 
+    return; 
+  }
+  
+  var newUser = {
+    id: Date.now(),
+    name: name,
+    email: email,
+    phone: phone,
+    password: pass,
+    createdAt: new Date().toISOString()
+  };
+  users.push(newUser);
+  currentUser = newUser;
+  saveData();
+  updateUIForUser();
+  closeModal('authModal');
+  showToast('Conta criada com sucesso!', 'success');
+}
+
+function logout() {
+  currentUser = null;
+  localStorage.removeItem('nailCurrentUser');
+  localStorage.removeItem('nailRememberedUser');
+  updateUIForUser();
+  showToast('Voce saiu da sua conta', 'info');
+}
+
+function handleAdminLogin(e) {
+  e.preventDefault();
+  var email = document.getElementById('adminLoginEmail').value;
+  var pass = document.getElementById('adminLoginPassword').value;
+  if (email === 'admin@ingridmattos.com' && pass === 'admin123') {
+    isAdmin = true;
+    closeModal('adminLoginModal');
+    openAdmin();
+    showToast('Bem-vinda ao painel administrativo!', 'success');
+    
+    // ===== LIMPA OS CAMPOS APÓS O LOGIN =====
+    document.getElementById('adminLoginEmail').value = '';
+    document.getElementById('adminLoginPassword').value = '';
+    // ========================================
+    
+  } else {
+    showToast('Credenciais invalidas', 'error');
+  }
+}
+
+function updateUIForUser() {
+  var loginBtn = document.getElementById('loginBtn');
+  var userMenu = document.getElementById('userMenu');
+  var userNameDisplay = document.getElementById('userNameDisplay');
+  var heroSignupBtn = document.getElementById('heroSignupBtn');
+  
+  if (currentUser) {
+    loginBtn.style.display = 'none';
+    userMenu.style.display = 'block';
+    userNameDisplay.textContent = currentUser.name.split(' ')[0];
+    if (heroSignupBtn) heroSignupBtn.style.display = 'none';
+  } else {
+    loginBtn.style.display = 'block';
+    userMenu.style.display = 'none';
+    if (heroSignupBtn) heroSignupBtn.style.display = 'inline-flex';
+  }
+}
+
+// ============================================================
+// TEMA
+// ============================================================
+function toggleTheme() {
+  var html = document.documentElement;
+  var icon = document.getElementById('themeIcon');
+  if (html.getAttribute('data-theme') === 'dark') {
+    html.removeAttribute('data-theme');
+    icon.className = 'fas fa-moon';
+    localStorage.setItem('theme', 'light');
+  } else {
+    html.setAttribute('data-theme', 'dark');
+    icon.className = 'fas fa-sun';
+    localStorage.setItem('theme', 'dark');
+  }
+}
+
+function applyTheme() {
+  var theme = localStorage.getItem('theme');
+  var icon = document.getElementById('themeIcon');
+  if (theme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    icon.className = 'fas fa-sun';
+  } else {
+    document.documentElement.removeAttribute('data-theme');
+    icon.className = 'fas fa-moon';
+  }
+}
+
+// ============================================================
+// SCROLL REVEAL E BACK TO TOP
+// ============================================================
+function setupScrollReveal() {
+  var sections = document.querySelectorAll('.section-hidden');
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('section-visible');
+      }
+    });
+  }, { threshold: 0.2, rootMargin: '0px 0px -50px 0px' });
+  
+  sections.forEach(function(section) {
+    observer.observe(section);
+  });
+}
+
+function setupBackToTop() {
+  var btn = document.getElementById('backToTop');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 500) {
+      btn.classList.add('show');
+    } else {
+      btn.classList.remove('show');
+    }
+  });
+}
+
+function setupScrollEffects() {
+  window.addEventListener('scroll', function() {
+    var navbar = document.getElementById('navbar');
+    if (window.scrollY > 50) navbar.classList.add('scrolled');
+    else navbar.classList.remove('scrolled');
+  });
+}
+
+function loadRememberedUser() {
+  var remembered = localStorage.getItem('nailRememberedUser');
+  if (remembered) {
+    var userData = JSON.parse(remembered);
+    var user = users.find(function(u) { return u.email === userData.email && u.password === userData.password; });
+    if (user) {
+      currentUser = user;
+      saveData();
+      updateUIForUser();
+    }
+  }
+}
+
+// ============================================================
+// NOTIFICAÇÕES PUSH
+// ============================================================
+function requestNotificationPermission() {
+  if ('Notification' in window && Notification.permission === 'default') {
+    Notification.requestPermission();
+  }
+}
+
+function sendNotification(title, body) {
+  if ('Notification' in window && Notification.permission === 'granted') {
+    new Notification(title, {
+      body: body,
+      icon: 'imagem/sobre.jpg'
+    });
+  }
+}
+
+// ============================================================
+// CARROSSEL
+// ============================================================
+function renderCardsCarousel() {
+  var track = document.getElementById('carouselTrack');
+  var dotsContainer = document.getElementById('carouselDots');
+  if (!track) return;
+  
+  if (carouselImages.length === 0) {
+    track.innerHTML = '<div class="carousel-slide" style="display:flex;align-items:center;justify-content:center;background:var(--rose-dark)"><p style="color:#fff">Adicione imagens ao carrossel</p></div>';
+    dotsContainer.innerHTML = '';
+    return;
+  }
+  
+  track.innerHTML = carouselImages.map(function(img, i) {
+    return '<div class="carousel-slide" onclick="handleAgendar()">' +
+      '<img src="' + img + '" alt="Trabalho ' + (i+1) + '" loading="lazy" onerror="handleImageError(this)">' +
+      '</div>';
+  }).join('');
+  
+  if (window.innerWidth <= 768) {
+    slidesPerView = 2;
+  } else if (window.innerWidth <= 1024) {
+    slidesPerView = 3;
+  } else {
+    slidesPerView = 6;
+  }
+  
+  var totalSlides = carouselImages.length;
+  var totalPages = Math.ceil(totalSlides / slidesPerView);
+  
+  if (currentPage >= totalPages) {
+    currentPage = 0;
+  }
+  
+  dotsContainer.innerHTML = '';
+  for (var i = 0; i < totalPages; i++) {
+    var dot = document.createElement('div');
+    dot.className = 'carousel-dot' + (i === currentPage ? ' active' : '');
+    dot.onclick = (function(index) { 
+      return function() { 
+        goToSlide(index); 
+      }; 
+    })(i);
+    dotsContainer.appendChild(dot);
+  }
+  
+  updateCarousel();
+  startAutoSlide();
+}
+
+function updateCarousel() {
+  var track = document.getElementById('carouselTrack');
+  if (!track) return;
+  
+  if (window.innerWidth <= 768) {
+    slidesPerView = 2;
+  } else if (window.innerWidth <= 1024) {
+    slidesPerView = 3;
+  } else {
+    slidesPerView = 6;
+  }
+  
+  var totalSlides = carouselImages.length;
+  var totalPages = Math.ceil(totalSlides / slidesPerView);
+  
+  if (currentPage >= totalPages) {
+    currentPage = totalPages - 1;
+  }
+  if (currentPage < 0) {
+    currentPage = 0;
+  }
+  
+  var slideWidth = 100 / slidesPerView;
+  var offset = currentPage * slideWidth;
+  
+  track.style.transform = 'translateX(-' + offset + '%)';
+  
+  var dots = document.querySelectorAll('.carousel-dot');
+  dots.forEach(function(d, i) {
+    d.classList.toggle('active', i === currentPage);
+  });
+}
+
+function nextSlide() {
+  if (window.innerWidth <= 768) {
+    slidesPerView = 2;
+  } else if (window.innerWidth <= 1024) {
+    slidesPerView = 3;
+  } else {
+    slidesPerView = 6;
+  }
+  
+  var totalSlides = carouselImages.length;
+  var totalPages = Math.ceil(totalSlides / slidesPerView);
+  
+  currentPage = (currentPage + 1) % totalPages;
+  
+  updateCarousel();
+  resetAutoSlide();
+}
+
+function prevSlide() {
+  if (window.innerWidth <= 768) {
+    slidesPerView = 2;
+  } else if (window.innerWidth <= 1024) {
+    slidesPerView = 3;
+  } else {
+    slidesPerView = 6;
+  }
+  
+  var totalSlides = carouselImages.length;
+  var totalPages = Math.ceil(totalSlides / slidesPerView);
+  
+  currentPage = (currentPage - 1 + totalPages) % totalPages;
+  
+  updateCarousel();
+  resetAutoSlide();
+}
+
+function goToSlide(index) {
+  if (window.innerWidth <= 768) {
+    slidesPerView = 2;
+  } else if (window.innerWidth <= 1024) {
+    slidesPerView = 3;
+  } else {
+    slidesPerView = 6;
+  }
+  
+  var totalSlides = carouselImages.length;
+  var totalPages = Math.ceil(totalSlides / slidesPerView);
+  
+  if (index >= 0 && index < totalPages) {
+    currentPage = index;
+    updateCarousel();
+    resetAutoSlide();
+  }
+}
+
+function startAutoSlide() {
+  if (autoSlideInterval) clearInterval(autoSlideInterval);
+  autoSlideInterval = setInterval(nextSlide, 5000);
+}
+
+function resetAutoSlide() {
+  clearInterval(autoSlideInterval);
+  startAutoSlide();
+}
+
+// ============================================================
+// FUNÇÕES PARA RENDERIZAR SERVIÇOS E CATÁLOGO
+// ============================================================
+function renderServicesGrid() {
+  var grid = document.getElementById('servicesGrid');
+  if (!grid) return;
+  var featured = services.slice(0, 6);
+  grid.innerHTML = featured.map(function(s) {
+    if (!s.views) s.views = 0;
+    s.views++;
+    return '<div class="service-card fade-in" onclick="selectServiceAndBook(' + s.id + ')">' +
+      '<div class="service-card-image">' +
+        (s.image ? '<img src="' + s.image + '" alt="' + s.name + '" loading="lazy" onerror="handleImageError(this)">' : '<div class="placeholder"><i class="fas fa-spa"></i></div>') +
+      '</div>' +
+      '<div class="service-card-content">' +
+        '<div class="category">' + s.category + '</div>' +
+        '<h4>' + s.name + '</h4>' +
+        '<div class="price">R$ ' + s.price.toFixed(2) + '</div>' +
+        '<div class="service-views"><i class="fas fa-eye"></i> ' + s.views + ' visualizações</div>' +
+        '<button class="book-btn">Agendar</button>' +
+      '</div>' +
+      '</div>';
+  }).join('');
+  saveData();
+}
+
+function renderCatalogGrid() {
+  var grid = document.getElementById('catalogGrid');
+  if (!grid) return;
+  grid.innerHTML = services.map(function(s) {
+    return '<div class="catalog-card" onclick="selectServiceAndBook(' + s.id + ')">' +
+      '<div class="catalog-card-image">' +
+        (s.image ? '<img src="' + s.image + '" alt="' + s.name + '" loading="lazy" onerror="handleImageError(this)">' : '<div class="placeholder"><i class="fas fa-spa"></i></div>') +
+      '</div>' +
+      '<div class="catalog-card-body">' +
+        '<h4>' + s.name + '</h4>' +
+        '<div class="price">R$ ' + s.price.toFixed(2) + '</div>' +
+        '<div class="duration"><i class="fas fa-clock"></i> ~2h30</div>' +
+        '<div class="service-views"><i class="fas fa-eye"></i> ' + (s.views || 0) + ' visualizações</div>' +
+      '</div>' +
+      '</div>';
+  }).join('');
+}
+
+function renderDecoGrid() {
+  var grid = document.getElementById('bookDecoGrid');
+  if (!grid) return;
+  grid.innerHTML = decorations.map(function(d) {
+    return '<button class="deco-select-item" onclick="selectDeco(' + d.id + ',this)">' + d.name + '<br><small>R$ ' + d.price.toFixed(0) + '</small></button>';
+  }).join('');
+}
+
+function openCatalogModal() { openModal('catalogModal'); }
+
+function selectServiceAndBook(id) {
+  selectedService = services.find(function(s) { return s.id === id; });
+  closeModal('catalogModal');
+  openBooking();
+}
+
+// ============================================================
+// GALERIA E AVALIAÇÕES
+// ============================================================
+function renderGallery(filter) {
+  filter = filter || 'all';
+  var grid = document.getElementById('galleryGrid');
+  if (!grid) return;
+  
+  var filtered = filter === 'all' ? galleryImages : galleryImages.filter(function(g) { return g.category === filter; });
+  
+  if (filtered.length === 0) {
+    grid.innerHTML = '<p style="text-align:center;color:var(--rose-light);grid-column:1/-1">Nenhuma imagem encontrada nesta categoria.</p>';
+    return;
+  }
+  
+  grid.innerHTML = filtered.map(function(g) {
+    return '<div class="gallery-item">' +
+      '<img src="' + g.url + '" alt="' + g.title + '" loading="lazy" onerror="handleImageError(this)">' +
+      '<div class="gallery-overlay"><span>' + g.title + '</span></div>' +
+      '</div>';
+  }).join('');
+}
+
+function filterGallery(category, btn) {
+  document.querySelectorAll('.gallery-filters button').forEach(function(b) { b.classList.remove('active'); });
+  btn.classList.add('active');
+  renderGallery(category);
+}
+
+function renderReviews() {
+  var grid = document.getElementById('reviewsGrid');
+  if (!grid) return;
+  
+  grid.innerHTML = reviews.map(function(r) {
+    var stars = '★'.repeat(r.rating) + '☆'.repeat(5 - r.rating);
+    return '<div class="review-card">' +
+      '<div class="stars">' + stars + '</div>' +
+      '<p class="review-text">"' + r.text + '"</p>' +
+      '<div class="review-author">- ' + r.author + '</div>' +
+      '<div class="review-date">' + new Date(r.date).toLocaleDateString('pt-BR') + '</div>' +
+      '</div>';
+  }).join('');
+}
+
+function openReviewModal() {
+  if (!currentUser) {
+    showToast('Faça login para avaliar', 'info');
+    openModal('authModal');
+    return;
+  }
+  document.getElementById('reviewAuthor').value = currentUser.name;
+  document.getElementById('reviewRating').value = 0;
+  document.getElementById('reviewText').value = '';
+  document.querySelectorAll('#starRating span').forEach(function(s) { s.textContent = '☆'; });
+  openModal('reviewModal');
+}
+
+function setRating(value) {
+  document.getElementById('reviewRating').value = value;
+  var stars = document.querySelectorAll('#starRating span');
+  stars.forEach(function(s, i) {
+    s.textContent = i < value ? '★' : '☆';
+  });
+}
+
+function submitReview(e) {
+  e.preventDefault();
+  var rating = parseInt(document.getElementById('reviewRating').value);
+  var text = document.getElementById('reviewText').value.trim();
+  var author = document.getElementById('reviewAuthor').value.trim();
+  
+  if (rating === 0) { showToast('Selecione uma avaliação', 'error'); return; }
+  if (!text) { showToast('Digite um comentário', 'error'); return; }
+  
+  reviews.push({
+    id: Date.now(),
+    author: author,
+    rating: rating,
+    text: text,
+    date: new Date().toISOString().split('T')[0]
+  });
+  saveData();
+  renderReviews();
+  closeModal('reviewModal');
+  showToast('Avaliação enviada! Obrigada!', 'success');
+}
+
+// ============================================================
+// PROMOÇÕES
+// ============================================================
+function renderPromotions() {
+  var container = document.getElementById('promoContainer');
+  if (!container) return;
+  
+  var activePromos = promotions.filter(function(p) { return p.active === true; });
+  
+  if (activePromos.length === 0) {
+    container.innerHTML = '';
+    return;
+  }
+  
+  container.innerHTML = activePromos.map(function(promo) {
+    return '<div class="promo-banner section-hidden">' +
+      '<span class="promo-discount">' + promo.discount + '</span>' +
+      '<h3>' + promo.title + '</h3>' +
+      '<p>' + promo.description + '</p>' +
+      '<span class="promo-code">' + promo.code + '</span>' +
+      '</div>';
+  }).join('');
+  
+  document.querySelectorAll('.promo-banner').forEach(function(el) {
+    setTimeout(function() {
+      el.classList.add('section-visible');
+    }, 300);
+  });
+}
+
+// ============================================================
+// AGENDAMENTO
+// ============================================================
+function openBooking() {
+  if (!currentUser) {
+    showToast('Faça login para agendar', 'info');
+    openModal('authModal');
+    return;
+  }
+  resetBookingForm();
+  renderBookingServices();
+  goToBookStep(1);
+  openModal('bookingModal');
+}
+
+function resetBookingForm() {
+  selectedService = null;
+  selectedDeco = null;
+  selectedDate = null;
+  selectedTime = null;
+  appliedPromo = null;
+  
+  document.getElementById('promoCodeInput').value = '';
+  document.getElementById('promoFeedback').style.display = 'none';
+  document.getElementById('removePromoBtn').style.display = 'none';
+  
+  document.getElementById('bookConfirmation').style.display = 'none';
+  for (var i = 1; i <= 4; i++) {
+    document.getElementById('bookStep' + i).style.display = 'none';
+  }
+  document.getElementById('bookStep1').style.display = 'block';
+  
+  for (var j = 1; j <= 4; j++) {
+    var circle = document.getElementById('step' + j);
+    var line = document.getElementById('line' + (j - 1));
+    circle.classList.remove('active', 'done');
+    if (j === 1) circle.classList.add('active');
+    if (line) line.classList.remove('active', 'done');
+  }
+  
+  calendarMonth = new Date().getMonth();
+  calendarYear = new Date().getFullYear();
+  renderCalendar();
+  renderTimeSlots();
+}
+
+function resetAndNewBooking() {
+  resetBookingForm();
+  renderBookingServices();
+  renderDecoGrid();
+  goToBookStep(1);
+}
+
+function renderBookingServices() {
+  var list = document.getElementById('bookServiceList');
+  if (!list) return;
+  list.innerHTML = services.map(function(s) {
+    var selected = selectedService && selectedService.id === s.id ? 'selected' : '';
+    return '<button class="deco-select-item ' + selected + '" onclick="selectBookingService(' + s.id + ',this)">' +
+      '<strong>' + s.name + '</strong><br><small style="color:var(--rose-light)">R$ ' + s.price.toFixed(2) + '</small>' +
+      '</button>';
+  }).join('');
+}
+
+function selectBookingService(id, btn) {
+  selectedService = services.find(function(s) { return s.id === id; });
+  document.querySelectorAll('#bookServiceList .deco-select-item').forEach(function(b) { b.classList.remove('selected'); });
+  btn.classList.add('selected');
+}
+
+function selectDeco(id, btn) {
+  if (selectedDeco && selectedDeco.id === id) {
+    selectedDeco = null;
+    btn.classList.remove('selected');
+  } else {
+    selectedDeco = decorations.find(function(d) { return d.id === id; });
+    document.querySelectorAll('#bookDecoGrid .deco-select-item').forEach(function(b) { b.classList.remove('selected'); });
+    btn.classList.add('selected');
+  }
+}
+
+function goToBookStep(step) {
+  for (var i = 1; i <= 4; i++) {
+    document.getElementById('bookStep' + i).style.display = 'none';
+  }
+  document.getElementById('bookStep' + step).style.display = 'block';
+  
+  for (var j = 1; j <= 4; j++) {
+    var circle = document.getElementById('step' + j);
+    var line = document.getElementById('line' + (j - 1));
+    circle.classList.remove('active', 'done');
+    if (j < step) circle.classList.add('done');
+    else if (j === step) circle.classList.add('active');
+    if (line) {
+      line.classList.remove('active', 'done');
+      if (j < step) line.classList.add('done');
+    }
+  }
+  if (step === 2) renderCalendar();
+  if (step === 3) renderTimeSlots();
+  if (step === 4) renderBookingSummary();
+}
+
+// ============================================================
+// CALENDÁRIO E HORÁRIOS
+// ============================================================
+function renderCalendar() {
+  var container = document.getElementById('bookingCalendar');
+  if (!container) return;
+  
+  var months = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+  var days = ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'];
+  var firstDay = new Date(calendarYear, calendarMonth, 1).getDay();
+  var daysInMonth = new Date(calendarYear, calendarMonth + 1, 0).getDate();
+  var today = new Date();
+  today.setHours(0,0,0,0);
+  
+  var html = '<div class="calendar-header">' +
+    '<button class="calendar-nav" onclick="changeMonth(-1)"><i class="fas fa-chevron-left"></i></button>' +
+    '<h3>' + months[calendarMonth] + ' ' + calendarYear + '</h3>' +
+    '<button class="calendar-nav" onclick="changeMonth(1)"><i class="fas fa-chevron-right"></i></button>' +
+    '</div><div class="calendar-grid">';
+  
+  for (var i = 0; i < days.length; i++) {
+    html += '<div class="day-name">' + days[i] + '</div>';
+  }
+  
+  for (var d = 0; d < firstDay; d++) {
+    html += '<div class="day empty"></div>';
+  }
+  
+  for (var d2 = 1; d2 <= daysInMonth; d2++) {
+    var date = new Date(calendarYear, calendarMonth, d2);
+    var dateStr = date.toISOString().split('T')[0];
+    var isPast = date < today;
+    var isToday = date.getTime() === today.getTime();
+    var isSelected = selectedDate === dateStr;
+    html += '<button class="day ' + (isPast ? 'disabled' : '') + (isToday ? ' today' : '') + (isSelected ? ' selected' : '') + '" ' + (isPast ? 'disabled' : '') + ' onclick="selectDate(\'' + dateStr + '\')">' + d2 + '</button>';
+  }
+  
+  html += '</div>';
+  container.innerHTML = html;
+}
+
+function changeMonth(delta) {
+  calendarMonth += delta;
+  if (calendarMonth < 0) { calendarMonth = 11; calendarYear--; }
+  else if (calendarMonth > 11) { calendarMonth = 0; calendarYear++; }
+  renderCalendar();
+}
+
+function selectDate(date) {
+  selectedDate = date;
+  var parts = date.split('-');
+  document.getElementById('selectedDateDisplay').textContent = parts[2] + '/' + parts[1] + '/' + parts[0];
+  renderCalendar();
+  renderTimeSlots();
+}
+
+function renderTimeSlots() {
+  var container = document.getElementById('timeSlotsGrid');
+  if (!container) return;
+  
+  var times = ['09:00','10:00','11:00','13:00','14:00','15:00','16:00','17:00'];
+  var today = new Date().toISOString().split('T')[0];
+  var now = new Date();
+  var currentHour = now.getHours();
+  var currentMin = now.getMinutes();
+  
+  var bookedTimes = [];
+  if (selectedDate) {
+    bookedTimes = bookings.filter(function(b) { return b.date === selectedDate && b.status !== 'cancelled'; }).map(function(b) { return b.time; });
+  }
+  
+  container.innerHTML = times.map(function(t) {
+    var parts = t.split(':');
+    var h = parseInt(parts[0]);
+    var m = parseInt(parts[1]);
+    var isPast = (selectedDate === today && (h < currentHour || (h === currentHour && m <= currentMin)));
+    var isBooked = bookedTimes.indexOf(t) !== -1;
+    var isSelected = selectedTime === t;
+    var isDisabled = isPast || isBooked;
+    
+    var cls = '';
+    if (isPast) cls += ' past';
+    if (isBooked) cls += ' booked';
+    if (isSelected) cls += ' selected';
+    
+    var title = '';
+    if (isPast) title = 'Horário já passou';
+    if (isBooked) title = 'Horário já reservado';
+    
+    return '<button class="time-slot' + cls + '" ' + (isDisabled ? 'disabled' : '') + ' onclick="selectTime(\'' + t + '\')" title="' + title + '">' + t + '</button>';
+  }).join('');
+}
+
+function selectTime(time) {
+  selectedTime = time;
+  renderTimeSlots();
+}
+
+// ============================================================
+// RESUMO E CONFIRMAÇÃO DO AGENDAMENTO
+// ============================================================
+function renderBookingSummary() {
+  var subtotal = (selectedService ? selectedService.price : 0) + (selectedDeco ? selectedDeco.price : 0);
+  var discountInfo = calculateDiscount(subtotal);
+  var total = discountInfo.total;
+  var hasDiscount = discountInfo.discount > 0;
+  
+  var summaryDiv = document.getElementById('bookingSummary');
+  
+  var html = 
+    '<div class="detail-row"><span>Cliente</span><span class="detail-value">' + (currentUser ? currentUser.name : '-') + '</span></div>' +
+    '<div class="detail-row"><span>Serviço</span><span class="detail-value">' + (selectedService ? selectedService.name : '-') + '</span></div>' +
+    '<div class="detail-row"><span>Decoração</span><span class="detail-value">' + (selectedDeco ? selectedDeco.name : 'Nenhuma') + '</span></div>' +
+    '<div class="detail-row"><span>Data</span><span class="detail-value">' + (selectedDate || '-') + '</span></div>' +
+    '<div class="detail-row"><span>Horário</span><span class="detail-value">' + (selectedTime || '-') + '</span></div>';
+  
+  if (hasDiscount) {
+    html += '<div class="detail-row"><span>Subtotal</span><span class="detail-value">R$ ' + subtotal.toFixed(2) + '</span></div>';
+    html += '<div class="detail-row" style="color:#2e7d32">' +
+      '<span><i class="fas fa-ticket-alt"></i> Desconto (' + appliedPromo.discount + ')</span>' +
+      '<span class="detail-value" style="color:#2e7d32">- R$ ' + discountInfo.discount.toFixed(2) + '</span>' +
+      '</div>';
+  }
+  
+  html += '<div class="detail-row"><span><strong>Valor Total</strong></span><span class="detail-value detail-total">R$ ' + total.toFixed(2) + '</span></div>';
+  
+  if (hasDiscount && appliedPromo) {
+    html += '<div class="detail-row" style="border-top:2px dashed var(--gold);padding-top:12px;margin-top:4px">' +
+      '<span style="font-size:12px;color:var(--gold)"><i class="fas fa-tag"></i> Cupom: ' + appliedPromo.code + '</span>' +
+      '<span style="font-size:12px;color:var(--rose-light)">' + appliedPromo.title + '</span>' +
+      '</div>';
+  }
+  
+  summaryDiv.innerHTML = html;
+}
+
+function confirmBookingWhatsApp() {
+  if (!selectedService || !selectedDate || !selectedTime) {
+    showToast('Preencha todos os campos', 'error');
+    return;
+  }
+  
+  var subtotal = selectedService.price + (selectedDeco ? selectedDeco.price : 0);
+  var discountInfo = calculateDiscount(subtotal);
+  var total = discountInfo.total;
+  
+  var promoCodeUsed = null;
+  if (appliedPromo) {
+    promoCodeUsed = appliedPromo.code;
+    registerCouponUsage(currentUser.email, promoCodeUsed);
+  }
+  
+  var booking = {
+    id: Date.now(),
+    clientId: currentUser.id,
+    clientName: currentUser.name,
+    clientEmail: currentUser.email,
+    clientPhone: currentUser.phone,
+    serviceId: selectedService.id,
+    serviceName: selectedService.name,
+    servicePrice: selectedService.price,
+    decorationId: selectedDeco ? selectedDeco.id : null,
+    decorationName: selectedDeco ? selectedDeco.name : null,
+    decorationPrice: selectedDeco ? selectedDeco.price : 0,
+    date: selectedDate,
+    time: selectedTime,
+    subtotal: subtotal,
+    discount: discountInfo.discount,
+    discountPercentage: discountInfo.percentage,
+    promoCode: promoCodeUsed,
+    promoName: appliedPromo ? appliedPromo.title : null,
+    total: total,
+    status: 'pending',
+    createdAt: new Date().toISOString()
+  };
+  
+  bookings.push(booking);
+  saveData();
+  currentBooking = booking;
+  
+  var dateFormatted = formatDateToPortuguese(selectedDate);
+  
+  var message = 'Olá Ingrid! Gostaria de confirmar meu agendamento:%0A%0A' +
+    'Cliente: ' + currentUser.name + '%0A' +
+    'Email: ' + currentUser.email + '%0A' +
+    'Serviço: ' + selectedService.name + '%0A' +
+    'Decoração: ' + (selectedDeco ? selectedDeco.name : 'Nenhuma') + '%0A' +
+    'Data: ' + dateFormatted + '%0A' +
+    'Horário: ' + selectedTime + '%0A';
+  
+  if (appliedPromo) {
+    message += 'Cupom aplicado: ' + appliedPromo.code + ' (' + appliedPromo.discount + ')%0A';
+  }
+  
+  message += 'Valor Total: R$ ' + total.toFixed(2);
+  
+  window.open('https://wa.me/5521985415061?text=' + message, '_blank');
+  showConfirmation(booking);
+}
+
+function confirmBooking() {
+  if (!selectedService || !selectedDate || !selectedTime) {
+    showToast('Preencha todos os campos', 'error');
+    return;
+  }
+  
+  var subtotal = selectedService.price + (selectedDeco ? selectedDeco.price : 0);
+  var discountInfo = calculateDiscount(subtotal);
+  var total = discountInfo.total;
+  
+  var promoCodeUsed = null;
+  if (appliedPromo) {
+    promoCodeUsed = appliedPromo.code;
+    registerCouponUsage(currentUser.email, promoCodeUsed);
+  }
+  
+  var booking = {
+    id: Date.now(),
+    clientId: currentUser.id,
+    clientName: currentUser.name,
+    clientEmail: currentUser.email,
+    clientPhone: currentUser.phone,
+    serviceId: selectedService.id,
+    serviceName: selectedService.name,
+    servicePrice: selectedService.price,
+    decorationId: selectedDeco ? selectedDeco.id : null,
+    decorationName: selectedDeco ? selectedDeco.name : null,
+    decorationPrice: selectedDeco ? selectedDeco.price : 0,
+    date: selectedDate,
+    time: selectedTime,
+    subtotal: subtotal,
+    discount: discountInfo.discount,
+    discountPercentage: discountInfo.percentage,
+    promoCode: promoCodeUsed,
+    promoName: appliedPromo ? appliedPromo.title : null,
+    total: total,
+    status: 'pending',
+    createdAt: new Date().toISOString()
+  };
+  
+  bookings.push(booking);
+  saveData();
+  currentBooking = booking;
+  showConfirmation(booking);
+}
+
+function showConfirmation(booking) {
+  document.getElementById('bookStep4').style.display = 'none';
+  document.getElementById('bookConfirmation').style.display = 'block';
+  
+  var dateFormatted = formatDateToPortuguese(booking.date);
+  
+  var detailsDiv = document.getElementById('confirmationDetails');
+  var html = 
+    '<div class="detail-row"><span>Serviço</span><span class="detail-value">' + booking.serviceName + '</span></div>' +
+    '<div class="detail-row"><span>Decoração</span><span class="detail-value">' + (booking.decorationName || 'Nenhuma') + '</span></div>' +
+    '<div class="detail-row"><span>Data</span><span class="detail-value">' + dateFormatted + '</span></div>' +
+    '<div class="detail-row"><span>Horário</span><span class="detail-value">' + booking.time + '</span></div>';
+  
+  if (booking.discount > 0) {
+    html += '<div class="detail-row" style="color:#2e7d32">' +
+      '<span><i class="fas fa-ticket-alt"></i> Desconto aplicado</span>' +
+      '<span class="detail-value" style="color:#2e7d32">- R$ ' + booking.discount.toFixed(2) + '</span>' +
+      '</div>';
+    if (booking.promoCode) {
+      html += '<div class="detail-row" style="font-size:12px;color:var(--gold)">' +
+        '<span>Cupom: ' + booking.promoCode + '</span>' +
+        '<span>' + (booking.promoName || '') + '</span>' +
+        '</div>';
+    }
+  }
+  
+  html += '<div class="detail-row"><span>Total</span><span class="detail-value">R$ ' + booking.total.toFixed(2) + '</span></div>';
+  
+  detailsDiv.innerHTML = html;
+}
+
+function exportPDF() {
+  if (!currentBooking) {
+    showToast('Nenhum agendamento para exportar', 'error');
+    return;
+  }
+  
+  var { jsPDF } = window.jspdf;
+  var doc = new jsPDF();
+  
+  doc.setFontSize(22);
+  doc.setTextColor(212, 160, 74);
+  doc.text('Comprovante de Agendamento', 20, 30);
+  
+  doc.setFontSize(12);
+  doc.setTextColor(74, 26, 46);
+  doc.text('Ingrid Matos Nail Designer', 20, 45);
+  doc.text('A Rainha do Alongamento', 20, 52);
+  
+  doc.setFontSize(11);
+  doc.setTextColor(139, 69, 87);
+  doc.text('Data: ' + new Date().toLocaleString('pt-BR'), 20, 65);
+  doc.text('Cliente: ' + currentBooking.clientName, 20, 75);
+  doc.text('Email: ' + currentBooking.clientEmail, 20, 83);
+  doc.text('Serviço: ' + currentBooking.serviceName, 20, 93);
+  doc.text('Decoração: ' + (currentBooking.decorationName || 'Nenhuma'), 20, 103);
+  
+  var dateFormatted = formatDateToPortuguese(currentBooking.date);
+  doc.text('Data do Agendamento: ' + dateFormatted, 20, 113);
+  doc.text('Horário: ' + currentBooking.time, 20, 123);
+  
+  if (currentBooking.discount > 0) {
+    doc.text('Subtotal: R$ ' + currentBooking.subtotal.toFixed(2), 20, 133);
+    doc.setTextColor(46, 125, 50);
+    doc.text('Desconto: - R$ ' + currentBooking.discount.toFixed(2), 20, 141);
+    if (currentBooking.promoCode) {
+      doc.text('Cupom: ' + currentBooking.promoCode, 20, 149);
+    }
+    doc.setTextColor(139, 69, 87);
+  }
+  
+  doc.setFontSize(14);
+  doc.setTextColor(212, 160, 74);
+  doc.text('Valor Total: R$ ' + currentBooking.total.toFixed(2), 20, 160);
+  
+  doc.setFontSize(10);
+  doc.setTextColor(150, 150, 150);
+  doc.text('Código: #' + currentBooking.id, 20, 175);
+  doc.text('Status: Pendente', 20, 182);
+  
+  doc.save('comprovante_' + currentBooking.id + '.pdf');
+  showToast('Comprovante baixado!', 'success');
+}
+
+function closeBookingModal() {
+  closeModal('bookingModal');
+  resetBookingForm();
+}
+
+function handleAgendar() {
+  if (!currentUser) {
+    showToast('Faça login para agendar', 'info');
+    openModal('authModal');
+  } else {
+    openBooking();
+  }
+}
+
+// ============================================================
+// MEUS AGENDAMENTOS
+// ============================================================
+function openMyBookings() {
+  if (!currentUser) {
+    showToast('Faça login para ver seus agendamentos', 'info');
+    openModal('authModal');
+    return;
+  }
+  renderMyBookings();
+  openModal('myBookingsModal');
+}
+
+function renderMyBookings() {
+  var container = document.getElementById('myBookingsList');
+  if (!container) return;
+  
+  var myBookings = bookings.filter(function(b) { return b.clientId === currentUser.id; })
+    .sort(function(a, b) { return new Date(b.date) - new Date(a.date); });
+  
+  if (myBookings.length === 0) {
+    container.innerHTML = '<p style="text-align:center;color:var(--rose-light);padding:40px">Você ainda não tem agendamentos.</p>';
+    return;
+  }
+  
+  container.innerHTML = myBookings.map(function(b) {
+    var statusColors = {
+      pending: '#fff3e0',
+      confirmed: '#e8f5e9',
+      cancelled: '#ffebee'
+    };
+    var statusTexts = {
+      pending: 'Pendente',
+      confirmed: 'Confirmado',
+      cancelled: 'Cancelado'
+    };
+    var statusColor = statusColors[b.status || 'pending'] || '#fff3e0';
+    var statusText = statusTexts[b.status || 'pending'] || 'Pendente';
+    
+    var dateFormatted = formatDateToPortuguese(b.date);
+    var valorComDesconto = b.total ? b.total.toFixed(2) : (b.servicePrice || 0).toFixed(2);
+    var hasDiscount = b.discount && b.discount > 0;
+    
+    return '<div class="my-booking-item">' +
+      '<div class="info">' +
+        '<h4>' + b.serviceName + '</h4>' +
+        '<p><i class="fas fa-calendar"></i> ' + dateFormatted + ' às ' + b.time + '</p>' +
+        '<p><i class="fas fa-gem"></i> ' + (b.decorationName || 'Nenhuma decoração') + '</p>' +
+        (hasDiscount ? '<p><i class="fas fa-ticket-alt" style="color:#2e7d32"></i> Cupom: ' + (b.promoCode || '') + ' (' + (b.discount || 0).toFixed(2) + ' de desconto)</p>' : '') +
+        '<p><strong>R$ ' + valorComDesconto + '</strong></p>' +
+      '</div>' +
+      '<div>' +
+        '<span class="status" style="background:' + statusColor + ';padding:4px 16px;border-radius:50px;font-size:12px;font-weight:600;display:inline-block;margin-bottom:8px">' + statusText + '</span>' +
+        (b.status !== 'cancelled' ? '<br><button class="btn-sm delete" onclick="cancelBooking(' + b.id + ')"><i class="fas fa-times"></i> Cancelar</button>' : '') +
+      '</div>' +
+      '</div>';
+  }).join('');
+}
+
+function cancelBooking(id) {
+  if (!confirm('Tem certeza que deseja cancelar este agendamento?')) return;
+  var b = bookings.find(function(x) { return x.id === id; });
+  if (b) {
+    b.status = 'cancelled';
+    saveData();
+    renderMyBookings();
+    showToast('Agendamento cancelado!', 'info');
+  }
+}
+
+// ============================================================
+// ADMIN - PAINEL COMPLETO
+// ============================================================
+function openAdmin() {
+  openModal('adminModal');
+  renderAdminDashboard();
+  renderAdminServices();
+  renderAdminDecorations();
+  renderAdminBookings();
+  renderGalleryManager();
+  renderPromoManager();
+  renderCarouselManager();
+  renderAdminBackground();
+  renderAdminAbout();
+  renderAdminUsers();
+  renderAdminReports();
+  renderAdminCoupons();
+  setTimeout(function() {
+    if (typeof Chart !== 'undefined') {
+      renderRevenueChart();
+    }
+  }, 500);
+}
+
+function closeAdmin() { closeModal('adminModal'); }
+
+function switchAdminTab(tab, btn) {
+  document.querySelectorAll('.admin-nav-item').forEach(function(b) { b.classList.remove('active'); });
+  btn.classList.add('active');
+  document.querySelectorAll('.admin-section').forEach(function(s) { s.classList.remove('active'); });
+  var targetId = 'admin' + tab.charAt(0).toUpperCase() + tab.slice(1);
+  var target = document.getElementById(targetId);
+  if (target) target.classList.add('active');
+  if (tab === 'gallery') renderGalleryManager();
+  if (tab === 'promotions') renderPromoManager();
+  if (tab === 'coupons') renderAdminCoupons();
+}
+
+// ============================================================
+// ADMIN - DASHBOARD
+// ============================================================
+function renderAdminDashboard() {
+  var stats = document.getElementById('adminStats');
+  var today = new Date().toISOString().split('T')[0];
+  var todayBookings = bookings.filter(function(b) { return b.date === today; });
+  var monthStart = new Date(new Date().getFullYear(), new Date().getMonth(), 1).toISOString().split('T')[0];
+  var monthBookings = bookings.filter(function(b) { return b.date >= monthStart; });
+  var confirmedMonth = monthBookings.filter(function(b) { return b.status === 'confirmed'; });
+  var revenue = confirmedMonth.reduce(function(s, b) { return s + (b.total || b.servicePrice || 0); }, 0);
+  
+  stats.innerHTML = 
+    '<div class="stat-card"><div class="number gold-text">' + bookings.length + '</div><div class="label">Total Agendamentos</div></div>' +
+    '<div class="stat-card"><div class="number gold-text">' + todayBookings.length + '</div><div class="label">Hoje</div></div>' +
+    '<div class="stat-card"><div class="number gold-text">' + monthBookings.length + '</div><div class="label">Este Mes</div></div>' +
+    '<div class="stat-card"><div class="number gold-text">R$ ' + revenue.toFixed(0) + '</div><div class="label">Receita Mes</div></div>';
+  
+  var recent = document.getElementById('recentBookings');
+  var last5 = bookings.slice(-5).reverse();
+  if (last5.length === 0) { 
+    recent.innerHTML = '<p style="color:var(--rose-light);font-size:14px">Nenhum agendamento ainda</p>'; 
+    return; 
+  }
+  recent.innerHTML = last5.map(function(b) {
+    var valor = b.total ? b.total.toFixed(2) : (b.servicePrice || 0).toFixed(2);
+    var hasDiscount = b.discount && b.discount > 0;
+    return '<div class="top5-item">' +
+      '<div class="top5-rank" style="background:var(--gold);color:#fff">' + (b.clientName ? b.clientName.charAt(0).toUpperCase() : '?') + '</div>' +
+      '<div style="flex:1"><strong>' + (b.clientName || 'Cliente') + '</strong><br><small style="color:var(--rose-light)">' + b.serviceName + ' - ' + b.date + (hasDiscount ? ' <i class="fas fa-ticket-alt" style="color:#2e7d32"></i>' : '') + '</small></div>' +
+      '<span class="admin-badge ' + (b.status || 'pending') + '">' + (b.status === 'confirmed' ? 'Confirmado' : b.status === 'cancelled' ? 'Cancelado' : 'Pendente') + '</span>' +
+      '<span style="font-weight:600;color:var(--gold-dark);font-size:13px">R$ ' + valor + '</span>' +
+      '</div>';
+  }).join('');
+}
+
+function renderRevenueChart() {
+  var canvas = document.getElementById('revenueChart');
+  if (!canvas) return;
+  
+  var months = [];
+  var data = [];
+  var today = new Date();
+  
+  for (var i = 5; i >= 0; i--) {
+    var d = new Date(today.getFullYear(), today.getMonth() - i, 1);
+    var monthStr = d.toISOString().split('T')[0].substring(0, 7);
+    months.push(d.toLocaleString('pt-BR', {month: 'short'}));
+    var monthBookings = bookings.filter(function(b) { 
+      return b.date && b.date.substring(0, 7) === monthStr && b.status === 'confirmed';
+    });
+    var total = monthBookings.reduce(function(s, b) { return s + (b.total || b.servicePrice || 0); }, 0);
+    data.push(total);
+  }
+  
+  if (chartInstance) {
+    chartInstance.destroy();
+  }
+  
+  var ctx = canvas.getContext('2d');
+  chartInstance = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: months,
+      datasets: [{
+        label: 'Receita (R$)',
+        data: data,
+        borderColor: '#d4a04a',
+        backgroundColor: 'rgba(212,160,74,0.1)',
+        fill: true,
+        tension: 0.4,
+        pointBackgroundColor: '#d4a04a'
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      plugins: {
+        legend: { display: false }
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          ticks: {
+            callback: function(value) { return 'R$ ' + value.toFixed(0); }
+          }
+        }
+      }
+    }
+  });
+}
+
+// ============================================================
+// ADMIN - SERVIÇOS
+// ============================================================
+function renderAdminServices() {
+  var tbody = document.getElementById('adminServicesTable');
+  tbody.innerHTML = services.map(function(s) {
+    return '<tr>' +
+      '<td>' + s.name + '</td>' +
+      '<td>' + s.category + '</td>' +
+      '<td>' + s.type + '</td>' +
+      '<td>R$ ' + s.price.toFixed(2) + '</td>' +
+      '<td>' + (s.views || 0) + '</td>' +
+      '<td>' + (s.image ? '<i class="fas fa-image" style="color:var(--gold)"></i>' : '<i class="fas fa-image" style="color:var(--pink-medium)"></i>') + '</td>' +
+      '<td>' +
+        '<button class="btn-sm edit" onclick="editService(' + s.id + ')"><i class="fas fa-edit"></i></button> ' +
+        '<button class="btn-sm delete" onclick="deleteService(' + s.id + ')"><i class="fas fa-trash"></i></button>' +
+      '</td>' +
+      '</tr>';
+  }).join('');
+}
+
+function toggleAddService() {
+  var form = document.getElementById('addServiceForm');
+  form.style.display = form.style.display === 'none' ? 'block' : 'none';
+}
+
+function saveNewService() {
+  var name = document.getElementById('newServName').value.trim();
+  var category = document.getElementById('newServCategory').value.trim();
+  var type = document.getElementById('newServType').value;
+  var price = parseFloat(document.getElementById('newServPrice').value) || 0;
+  var image = document.getElementById('newServImage').value.trim();
+  if (!name || !category) { showToast('Preencha nome e categoria', 'error'); return; }
+  services.push({ id: Date.now(), name: name, category: category, type: type, price: price, image: image, views: 0 });
+  saveData();
+  renderAdminServices();
+  renderServicesGrid();
+  renderCatalogGrid();
+  toggleAddService();
+  document.getElementById('newServName').value = '';
+  document.getElementById('newServCategory').value = '';
+  document.getElementById('newServPrice').value = '';
+  document.getElementById('newServImage').value = '';
+  showToast('Servico adicionado!', 'success');
+}
+
+function editService(id) {
+  var s = services.find(function(x) { return x.id === id; });
+  if (!s) return;
+  document.getElementById('editServId').value = id;
+  document.getElementById('editServName').value = s.name;
+  document.getElementById('editServCategory').value = s.category;
+  document.getElementById('editServType').value = s.type;
+  document.getElementById('editServPrice').value = s.price;
+  document.getElementById('editServImage').value = s.image || '';
+  openModal('editServiceModal');
+}
+
+function saveEditService() {
+  var id = parseInt(document.getElementById('editServId').value);
+  var s = services.find(function(x) { return x.id === id; });
+  if (!s) return;
+  s.name = document.getElementById('editServName').value.trim();
+  s.category = document.getElementById('editServCategory').value.trim();
+  s.type = document.getElementById('editServType').value;
+  s.price = parseFloat(document.getElementById('editServPrice').value) || 0;
+  s.image = document.getElementById('editServImage').value.trim();
+  saveData();
+  renderAdminServices();
+  renderServicesGrid();
+  renderCatalogGrid();
+  closeModal('editServiceModal');
+  showToast('Servico atualizado!', 'success');
+}
+
+function deleteService(id) {
+  if (!confirm('Excluir este servico?')) return;
+  services = services.filter(function(s) { return s.id !== id; });
+  saveData();
+  renderAdminServices();
+  renderServicesGrid();
+  renderCatalogGrid();
+  showToast('Servico excluido', 'info');
+}
+
+// ============================================================
+// ADMIN - DECORAÇÕES
+// ============================================================
+function renderAdminDecorations() {
+  var tbody = document.getElementById('adminDecorTable');
+  tbody.innerHTML = decorations.map(function(d) {
+    return '<tr>' +
+      '<td>' + d.name + '</td>' +
+      '<td>R$ ' + d.price.toFixed(2) + '</td>' +
+      '<td>' +
+        '<button class="btn-sm edit" onclick="editDecor(' + d.id + ')"><i class="fas fa-edit"></i></button> ' +
+        '<button class="btn-sm delete" onclick="deleteDecor(' + d.id + ')"><i class="fas fa-trash"></i></button>' +
+      '</td>' +
+      '</tr>';
+  }).join('');
+}
+
+function toggleAddDecor() {
+  var form = document.getElementById('addDecorForm');
+  form.style.display = form.style.display === 'none' ? 'block' : 'none';
+}
+
+function saveNewDecor() {
+  var name = document.getElementById('newDecorName').value.trim();
+  var price = parseFloat(document.getElementById('newDecorPrice').value) || 0;
+  if (!name) { showToast('Digite o nome da decoracao', 'error'); return; }
+  decorations.push({ id: Date.now(), name: name.toUpperCase(), price: price });
+  saveData();
+  renderAdminDecorations();
+  renderDecoGrid();
+  toggleAddDecor();
+  document.getElementById('newDecorName').value = '';
+  document.getElementById('newDecorPrice').value = '';
+  showToast('Decoracao adicionada!', 'success');
+}
+
+function editDecor(id) {
+  var d = decorations.find(function(x) { return x.id === id; });
+  if (!d) return;
+  document.getElementById('editDecorId').value = id;
+  document.getElementById('editDecorName').value = d.name;
+  document.getElementById('editDecorPrice').value = d.price;
+  openModal('editDecorModal');
+}
+
+function saveEditDecor() {
+  var id = parseInt(document.getElementById('editDecorId').value);
+  var d = decorations.find(function(x) { return x.id === id; });
+  if (!d) return;
+  d.name = document.getElementById('editDecorName').value.trim().toUpperCase();
+  d.price = parseFloat(document.getElementById('editDecorPrice').value) || 0;
+  saveData();
+  renderAdminDecorations();
+  renderDecoGrid();
+  closeModal('editDecorModal');
+  showToast('Decoracao atualizada!', 'success');
+}
+
+function deleteDecor(id) {
+  if (!confirm('Excluir esta decoracao?')) return;
+  decorations = decorations.filter(function(d) { return d.id !== id; });
+  saveData();
+  renderAdminDecorations();
+  renderDecoGrid();
+  showToast('Decoracao excluida', 'info');
+}
+
+// ============================================================
+// ADMIN - AGENDAMENTOS
+// ============================================================
+function renderAdminBookings() {
+  var tbody = document.getElementById('adminBookingsTable');
+  var filterDate = document.getElementById('filterDate').value;
+  var filterClient = document.getElementById('filterClient').value.toLowerCase();
+  var filterStatus = document.getElementById('filterStatus').value;
+  
+  var filtered = bookings.slice();
+  
+  if (filterDate) {
+    filtered = filtered.filter(function(b) { return b.date === filterDate; });
+  }
+  if (filterClient) {
+    filtered = filtered.filter(function(b) { 
+      return (b.clientName || '').toLowerCase().includes(filterClient); 
+    });
+  }
+  if (filterStatus) {
+    filtered = filtered.filter(function(b) { return (b.status || 'pending') === filterStatus; });
+  }
+  
+  var sorted = filtered.sort(function(a, b) { return new Date(b.date) - new Date(a.date); });
+  tbody.innerHTML = sorted.map(function(b) {
+    var valor = b.total ? b.total.toFixed(2) : (b.servicePrice || 0).toFixed(2);
+    var hasDiscount = b.discount && b.discount > 0;
+    return '<tr>' +
+      '<td>' + (b.clientName || '-') + '</td>' +
+      '<td>' + (b.serviceName || '-') + '</td>' +
+      '<td>' + (b.decorationName || 'Nenhuma') + '</td>' +
+      '<td>' + b.date + '</td>' +
+      '<td>' + b.time + '</td>' +
+      '<td>R$ ' + valor + (hasDiscount ? ' <i class="fas fa-ticket-alt" style="color:#2e7d32" title="Cupom: ' + (b.promoCode || '') + '"></i>' : '') + '</td>' +
+      '<td><span class="admin-badge ' + (b.status || 'pending') + '">' + (b.status === 'confirmed' ? 'Confirmado' : b.status === 'cancelled' ? 'Cancelado' : 'Pendente') + '</span></td>' +
+      '<td>' +
+        '<button class="btn-sm edit" onclick="updateBookingStatus(' + b.id + ',\'confirmed\')"><i class="fas fa-check"></i></button> ' +
+        '<button class="btn-sm delete" onclick="updateBookingStatus(' + b.id + ',\'cancelled\')"><i class="fas fa-times"></i></button>' +
+      '</td>' +
+      '</tr>';
+  }).join('');
+}
+
+function updateBookingStatus(id, status) {
+  var b = bookings.find(function(x) { return x.id === id; });
+  if (b) { 
+    b.status = status; 
+    saveData(); 
+    renderAdminBookings(); 
+    renderAdminDashboard(); 
+    if (status === 'confirmed') {
+      sendNotification('Agendamento Confirmado!', 'Seu agendamento foi confirmado para ' + b.date + ' às ' + b.time);
+    }
+    showToast('Status atualizado!', 'success'); 
+  }
+}
+
+function exportAdminBookings() {
+  var csv = 'Cliente,Email,Serviço,Decoração,Data,Horário,Subtotal,Desconto,Cupom,Total,Status\n';
+  bookings.forEach(function(b) {
+    csv += (b.clientName || '-') + ',' +
+           (b.clientEmail || '-') + ',' +
+           (b.serviceName || '-') + ',' +
+           (b.decorationName || 'Nenhuma') + ',' +
+           b.date + ',' + b.time + ',' +
+           (b.subtotal || b.servicePrice || 0).toFixed(2) + ',' +
+           (b.discount || 0).toFixed(2) + ',' +
+           (b.promoCode || '-') + ',' +
+           (b.total || b.servicePrice || 0).toFixed(2) + ',' +
+           (b.status || 'pending') + '\n';
+  });
+  var blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a');
+  a.href = url;
+  a.download = 'agendamentos_' + new Date().toISOString().split('T')[0] + '.csv';
+  a.click();
+  URL.revokeObjectURL(url);
+  showToast('Relatório exportado!', 'success');
+}
+
+// ============================================================
+// ADMIN - GALERIA
+// ============================================================
+function renderGalleryManager() {
+  var container = document.getElementById('galleryManager');
+  if (!container) return;
+  
+  if (galleryImages.length === 0) {
+    container.innerHTML = '<p style="color:var(--rose-light);font-size:14px">Nenhuma imagem na galeria. Clique em "Adicionar Imagem" para começar.</p>';
+    return;
+  }
+  
+  container.innerHTML = galleryImages.map(function(img, i) {
+    return '<div class="gallery-manager-item">' +
+      '<img src="' + img.url + '" alt="' + img.title + '" loading="lazy" onerror="handleImageError(this)">' +
+      '<div class="info">' +
+        '<input type="text" value="' + img.url + '" onchange="updateGalleryImage(' + i + ',\'url\',this.value)" placeholder="URL da imagem">' +
+        '<input type="text" value="' + img.title + '" onchange="updateGalleryImage(' + i + ',\'title\',this.value)" placeholder="Título da imagem">' +
+        '<select onchange="updateGalleryImage(' + i + ',\'category\',this.value)">' +
+          '<option value="acrigel"' + (img.category === 'acrigel' ? ' selected' : '') + '>Acrigel</option>' +
+          '<option value="molde"' + (img.category === 'molde' ? ' selected' : '') + '>Molde F1</option>' +
+          '<option value="polygel"' + (img.category === 'polygel' ? ' selected' : '') + '>Polygel</option>' +
+          '<option value="gel"' + (img.category === 'gel' ? ' selected' : '') + '>Banho de Gel</option>' +
+        '</select>' +
+      '</div>' +
+      '<button class="btn-remove" onclick="removeGalleryImage(' + i + ')"><i class="fas fa-trash"></i> Remover</button>' +
+      '</div>';
+  }).join('');
+}
+
+function addGalleryImage() {
+  galleryImages.push({
+    id: Date.now(),
+    url: 'imagem/nova-galeria.jpg',
+    category: 'acrigel',
+    title: 'Novo Trabalho'
+  });
+  saveData();
+  renderGalleryManager();
+  renderGallery();
+  showToast('Imagem adicionada! Edite os campos abaixo.', 'info');
+}
+
+function updateGalleryImage(index, field, value) {
+  if (field === 'url') galleryImages[index].url = value;
+  else if (field === 'title') galleryImages[index].title = value;
+  else if (field === 'category') galleryImages[index].category = value;
+  saveData();
+  renderGallery();
+  showToast('Galeria atualizada!', 'success');
+}
+
+function removeGalleryImage(index) {
+  if (!confirm('Remover esta imagem da galeria?')) return;
+  galleryImages.splice(index, 1);
+  saveData();
+  renderGalleryManager();
+  renderGallery();
+  showToast('Imagem removida da galeria.', 'info');
+}
+
+// ============================================================
+// ADMIN - PROMOÇÕES
+// ============================================================
+function renderPromoManager() {
+  var container = document.getElementById('promoManager');
+  if (!container) return;
+  
+  if (promotions.length === 0) {
+    container.innerHTML = '<p style="color:var(--rose-light);font-size:14px">Nenhuma promoção cadastrada. Clique em "Adicionar Promoção" para começar.</p>';
+    return;
+  }
+  
+  container.innerHTML = promotions.map(function(promo, i) {
+    return '<div class="promo-manager-item">' +
+      '<div class="info">' +
+        '<input type="text" value="' + promo.title + '" onchange="updatePromotion(' + i + ',\'title\',this.value)" placeholder="Título">' +
+        '<input type="text" value="' + promo.description + '" onchange="updatePromotion(' + i + ',\'description\',this.value)" placeholder="Descrição">' +
+        '<input type="text" value="' + promo.discount + '" onchange="updatePromotion(' + i + ',\'discount\',this.value)" placeholder="Desconto (ex: 20% OFF)">' +
+        '<input type="text" value="' + promo.code + '" onchange="updatePromotion(' + i + ',\'code\',this.value)" placeholder="Código do cupom">' +
+        '<label style="display:flex;align-items:center;gap:8px;margin-top:4px;font-size:13px">' +
+          '<input type="checkbox" ' + (promo.active ? 'checked' : '') + ' onchange="updatePromotion(' + i + ',\'active\',this.checked)"> Ativo' +
+        '</label>' +
+      '</div>' +
+      '<span class="status-badge ' + (promo.active ? 'active' : 'inactive') + '">' + (promo.active ? 'Ativo' : 'Inativo') + '</span>' +
+      '<button class="btn-remove" onclick="removePromotion(' + i + ')"><i class="fas fa-trash"></i> Remover</button>' +
+      '</div>';
+  }).join('');
+}
+
+function addPromotion() {
+  promotions.push({
+    id: Date.now(),
+    title: 'Nova Promoção',
+    description: 'Descrição da promoção',
+    discount: '10% OFF',
+    code: 'PROMO10',
+    active: true
+  });
+  saveData();
+  renderPromoManager();
+  renderPromotions();
+  showToast('Promoção adicionada! Edite os campos abaixo.', 'info');
+}
+
+function updatePromotion(index, field, value) {
+  if (field === 'active') {
+    promotions[index].active = value;
+  } else {
+    promotions[index][field] = value;
+  }
+  saveData();
+  renderPromoManager();
+  renderPromotions();
+  showToast('Promoção atualizada!', 'success');
+}
+
+function removePromotion(index) {
+  if (!confirm('Remover esta promoção?')) return;
+  promotions.splice(index, 1);
+  saveData();
+  renderPromoManager();
+  renderPromotions();
+  showToast('Promoção removida.', 'info');
+}
+
+// ============================================================
+// ADMIN - CARROSSEL
+// ============================================================
+function renderCarouselManager() {
+  var container = document.getElementById('carouselManager');
+  if (carouselImages.length === 0) {
+    container.innerHTML = '<p style="color:var(--rose-light);font-size:14px">Nenhuma imagem no carrossel.</p>';
+    return;
+  }
+  container.innerHTML = carouselImages.map(function(img, i) {
+    return '<div class="carousel-manager-item">' +
+      '<img src="' + img + '" alt="Slide ' + (i+1) + '" loading="lazy" onerror="handleImageError(this)">' +
+      '<input type="text" value="' + img + '" onchange="updateCarouselImage(' + i + ',this.value)" placeholder="URL ou caminho">' +
+      '<button class="btn-remove" onclick="removeCarouselImage(' + i + ')"><i class="fas fa-trash"></i> Remover</button>' +
+      '</div>';
+  }).join('');
+}
+
+function addCarouselImage() {
+  carouselImages.push('imagem/nova-foto.jpg');
+  saveData();
+  renderCarouselManager();
+  renderCardsCarousel();
+  showToast('Imagem adicionada!', 'info');
+}
+
+function updateCarouselImage(index, url) {
+  carouselImages[index] = url;
+  saveData();
+  renderCardsCarousel();
+}
+
+function removeCarouselImage(index) {
+  if (carouselImages.length <= 1) { showToast('O carrossel precisa de pelo menos uma imagem', 'error'); return; }
+  carouselImages.splice(index, 1);
+  saveData();
+  renderCarouselManager();
+  renderCardsCarousel();
+  showToast('Imagem removida', 'info');
+}
+
+// ============================================================
+// ADMIN - BACKGROUND E ABOUT
+// ============================================================
+function renderAdminBackground() {
+  var preview = document.getElementById('adminBgPreview');
+  var noPreview = document.getElementById('noBgPreview');
+  var bg = localStorage.getItem('nailHeroBackground');
+  if (bg) {
+    preview.src = bg;
+    preview.style.display = 'block';
+    noPreview.style.display = 'none';
+    document.getElementById('heroBgUrl').value = bg;
+  } else {
+    preview.style.display = 'none';
+    noPreview.style.display = 'block';
+    document.getElementById('heroBgUrl').value = '';
+  }
+}
+
+function previewHeroBg(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      document.getElementById('adminBgPreview').src = e.target.result;
+      document.getElementById('adminBgPreview').style.display = 'block';
+      document.getElementById('noBgPreview').style.display = 'none';
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+function saveHeroBackground() {
+  var url = document.getElementById('heroBgUrl').value.trim();
+  var file = document.getElementById('heroBgFile');
+  if (file.files && file.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      localStorage.setItem('nailHeroBackground', e.target.result);
+      applyHeroBackground(e.target.result);
+      renderAdminBackground();
+      showToast('Imagem de fundo salva!', 'success');
+    };
+    reader.readAsDataURL(file.files[0]);
+  } else if (url) {
+    localStorage.setItem('nailHeroBackground', url);
+    applyHeroBackground(url);
+    renderAdminBackground();
+    showToast('Imagem de fundo salva!', 'success');
+  } else {
+    showToast('Forneça uma URL ou selecione um arquivo', 'error');
+  }
+}
+
+function removeHeroBackground() {
+  localStorage.removeItem('nailHeroBackground');
+  applyHeroBackground(null);
+  renderAdminBackground();
+  document.getElementById('heroBgUrl').value = '';
+  document.getElementById('heroBgFile').value = '';
+  showToast('Imagem de fundo removida', 'info');
+}
+
+function applyHeroBackground() {
+  var bg = document.getElementById('heroBackground');
+  // Usa a imagem padrão sempre
+  bg.style.backgroundImage = "url('imagem/fundo.jpg')";
+  bg.style.backgroundSize = 'cover';
+  bg.style.backgroundPosition = 'center';
+  bg.style.backgroundRepeat = 'no-repeat';
+}
+
+function renderAdminAbout() {
+  var preview = document.getElementById('adminAboutPreview');
+  var photo = localStorage.getItem('nailAboutPhoto');
+  if (photo && photo !== 'null' && photo !== 'undefined' && photo.length > 10) {
+    preview.src = photo;
+    document.getElementById('adminAboutUrl').value = photo;
+  } else {
+    preview.src = 'imagem/sobre.jpg';
+    document.getElementById('adminAboutUrl').value = '';
+  }
+}
+
+function previewAboutFile(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      document.getElementById('adminAboutPreview').src = e.target.result;
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+function saveAboutPhoto() {
+  var url = document.getElementById('adminAboutUrl').value.trim();
+  var file = document.getElementById('adminAboutFile');
+  var preview = document.getElementById('adminAboutPreview');
+  
+  if (file.files && file.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      var base64Data = e.target.result;
+      localStorage.setItem('nailAboutPhoto', base64Data);
+      preview.src = base64Data;
+      applyAboutPhoto(base64Data);
+      renderAdminAbout();
+      showToast('Foto "Sobre" atualizada com sucesso!', 'success');
+      file.value = '';
+    };
+    reader.readAsDataURL(file.files[0]);
+    return;
+  }
+  
+  if (url && url.length > 0) {
+    if (url.startsWith('data:image') || url.startsWith('http')) {
+      localStorage.setItem('nailAboutPhoto', url);
+      preview.src = url;
+      applyAboutPhoto(url);
+      renderAdminAbout();
+      showToast('Foto "Sobre" atualizada com sucesso!', 'success');
+    } else {
+      showToast('URL inválida. Use uma URL http ou código base64.', 'error');
+    }
+    return;
+  }
+  
+  showToast('Forneça uma URL, cole um código base64 ou selecione um arquivo.', 'error');
+}
+
+function resetAboutPhoto() {
+  if (!confirm('Restaurar a foto padrão?')) return;
+  localStorage.removeItem('nailAboutPhoto');
+  var preview = document.getElementById('adminAboutPreview');
+  preview.src = 'imagem/sobre.jpg';
+  document.getElementById('adminAboutUrl').value = '';
+  document.getElementById('adminAboutFile').value = '';
+  applyAboutPhoto('imagem/sobre.jpg');
+  showToast('Foto restaurada para o padrão!', 'info');
+}
+
+function applyAboutPhoto(url) {
+  var aboutImg = document.getElementById('aboutPhoto');
+  var fallback = document.querySelector('.about-fallback');
+  
+  if (!aboutImg) return;
+  
+  if (url && url !== 'null' && url !== 'undefined' && url.length > 10) {
+    aboutImg.onerror = null;
+    aboutImg.src = url;
+    aboutImg.style.display = 'block';
+    if (fallback) fallback.style.display = 'none';
+    
+    aboutImg.onload = function() {
+      aboutImg.style.display = 'block';
+      if (fallback) fallback.style.display = 'none';
+    };
+    
+    aboutImg.onerror = function() {
+      aboutImg.style.display = 'none';
+      if (fallback) fallback.style.display = 'flex';
+    };
+  } else {
+    aboutImg.onerror = null;
+    aboutImg.src = 'imagem/sobre.jpg';
+    aboutImg.style.display = 'block';
+    if (fallback) fallback.style.display = 'none';
+    
+    aboutImg.onerror = function() {
+      aboutImg.style.display = 'none';
+      if (fallback) fallback.style.display = 'flex';
+    };
+  }
+}
+
+// ============================================================
+// ADMIN - USUÁRIOS
+// ============================================================
+function renderAdminUsers() {
+  var tbody = document.getElementById('adminUsersTable');
+  tbody.innerHTML = users.map(function(u) {
+    return '<tr>' +
+      '<td>' + u.name + '</td>' +
+      '<td>' + u.email + '</td>' +
+      '<td>' + (u.phone || '-') + '</td>' +
+      '<td>' + new Date(u.createdAt).toLocaleDateString('pt-BR') + '</td>' +
+      '<td>' + (u.email !== 'admin@ingridmatos.com' ? 
+        '<button class="btn-sm delete" onclick="deleteUser(' + u.id + ')"><i class="fas fa-trash"></i> Excluir</button>' : 
+        '<span style="color:var(--gold);font-size:11px">Administrador</span>') + 
+      '</td>' +
+      '</tr>';
+  }).join('');
+}
+
+function deleteUser(userId) {
+  if (!confirm('Tem certeza que deseja excluir este usuário?')) return;
+  var userToDelete = users.find(function(u) { return u.id === userId; });
+  if (userToDelete && userToDelete.email === 'admin@ingridMatos.com') {
+    showToast('Não é possível excluir o administrador!', 'error');
+    return;
+  }
+  users = users.filter(function(u) { return u.id !== userId; });
+  bookings = bookings.filter(function(b) { return b.clientId !== userId; });
+  if (currentUser && currentUser.id === userId) {
+    currentUser = null;
+    localStorage.removeItem('nailCurrentUser');
+    updateUIForUser();
+  }
+  saveData();
+  if (isAdmin) renderAdminUsers();
+  showToast('Usuário excluído!', 'success');
+}
+
+// ============================================================
+// ADMIN - RELATÓRIOS
+// ============================================================
+function renderAdminReports() {
+  var totalRevenue = bookings.filter(function(b) { return b.status === 'confirmed'; })
+    .reduce(function(s, b) { return s + (b.total || b.servicePrice || 0); }, 0);
+  document.getElementById('reportTotalRevenue').textContent = 'R$ ' + totalRevenue.toFixed(2);
+  document.getElementById('reportTotalBookings').textContent = bookings.length;
+  
+  var serviceCounts = {};
+  bookings.forEach(function(b) {
+    if (b.serviceName) {
+      serviceCounts[b.serviceName] = (serviceCounts[b.serviceName] || 0) + 1;
+    }
+  });
+  var topService = '';
+  var topCount = 0;
+  for (var key in serviceCounts) {
+    if (serviceCounts[key] > topCount) {
+      topCount = serviceCounts[key];
+      topService = key;
+    }
+  }
+  document.getElementById('reportTopService').textContent = topService || '-';
+  document.getElementById('reportTopServiceCount').textContent = topCount;
+}
+
+function exportFullReport() {
+  var { jsPDF } = window.jspdf;
+  var doc = new jsPDF();
+  
+  doc.setFontSize(20);
+  doc.setTextColor(74, 26, 46);
+  doc.text('Relatório - Ingrid Matos Nail Designer', 20, 30);
+  
+  doc.setFontSize(12);
+  doc.setTextColor(139, 69, 87);
+  doc.text('Data: ' + new Date().toLocaleString('pt-BR'), 20, 45);
+  
+  var totalRevenue = bookings.filter(function(b) { return b.status === 'confirmed'; })
+    .reduce(function(s, b) { return s + (b.total || b.servicePrice || 0); }, 0);
+  doc.text('Total de Agendamentos: ' + bookings.length, 20, 60);
+  doc.text('Receita Total: R$ ' + totalRevenue.toFixed(2), 20, 70);
+  doc.text('Agendamentos Confirmados: ' + bookings.filter(function(b) { return b.status === 'confirmed'; }).length, 20, 80);
+  
+  doc.text('----- Últimos Agendamentos -----', 20, 95);
+  var y = 105;
+  var last5 = bookings.slice(-5).reverse();
+  last5.forEach(function(b) {
+    var valor = b.total ? b.total.toFixed(2) : (b.servicePrice || 0).toFixed(2);
+    var hasDiscount = b.discount && b.discount > 0;
+    doc.text(b.date + ' - ' + b.clientName + ' - ' + b.serviceName + (hasDiscount ? ' (Cupom: ' + (b.promoCode || '') + ')' : '') + ' - R$ ' + valor, 20, y);
+    y += 8;
+  });
+  
+  doc.save('relatorio_' + new Date().toISOString().split('T')[0] + '.pdf');
+  showToast('Relatório exportado!', 'success');
+}
+
+// ============================================================
+// INICIALIZAÇÃO FINAL
+// ============================================================
+document.addEventListener('DOMContentLoaded', function() {
+  loadData();
+  renderCardsCarousel();
+  renderServicesGrid();
+  renderCatalogGrid();
+  renderDecoGrid();
+  renderCalendar();
+  renderGallery();
+  renderReviews();
+  renderPromotions();
+  setupScrollEffects();
+  updateUIForUser();
+  setupScrollReveal();
+  applyTheme();
+  setupBackToTop();
+  loadRememberedUser();
+  renderMyBookings();
+  
+  document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('modal-overlay') && e.target.classList.contains('active')) {
+      e.target.classList.remove('active');
+    }
+    if (!e.target.closest('.user-menu')) {
+      document.getElementById('userDropdown').classList.remove('show');
+    }
+  });
+  
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.modal-overlay.active').forEach(function(m) {
+        m.classList.remove('active');
+      });
+    }
+  });
+});
+
+(function() {
+  // Aplica a imagem de fundo padrão
+  applyHeroBackground();
+  
+  var photo = localStorage.getItem('nailAboutPhoto');
+  if (photo && photo !== 'null' && photo !== 'undefined' && photo.length > 10) {
+    applyAboutPhoto(photo);
+  } else {
+    applyAboutPhoto('imagem/sobre.jpg');
+  }
+})();
+
+console.log('✅ Ingrid Matos Nail Designer - COMPLETO!');
+console.log('🔑 Admin: admin@ingridmatos.com / admin123');
+console.log('📸 Galeria: Gerenciável pelo Admin');
+console.log('🏷️ Promoções: Gerenciáveis pelo Admin');
+console.log('📅 Data: Formato Português (DD/MM/AAAA) no WhatsApp');
+console.log('🔗 Redes Sociais: Botão "Seguir" no rodapé');
+console.log('📊 Dashboard: Gráficos, filtros e relatórios');
+console.log('📱 Meus Agendamentos: Visualize e cancele');
+console.log('⭐ Avaliações: Clientes podem avaliar');
+console.log('🖼️ Galeria: Filtros por categoria');
+console.log('🎠 Carrossel: 6 cards desktop / 2 cards mobile');
+console.log('✅ SEM LOOP DE ERROS DE IMAGEM!');
+console.log('✅ autocomplete adicionado nos campos de senha!');
+console.log('✅ Foto "Sobre" funcionando corretamente!');
+console.log('🎫 Sistema de cupons com validação por usuário!');
+console.log('📊 Admin: Aba "Cupons Usados" para monitoramento!');
+</script>
+</body>
+</html>
